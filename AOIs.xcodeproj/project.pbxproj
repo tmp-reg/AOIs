@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E0A43EA1CBE20DD00276861 /* TowerAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0A43E81CBE20DD00276861 /* TowerAOI.cpp */; };
+		6E0A43ED1CBE21D000276861 /* Tower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0A43EB1CBE21D000276861 /* Tower.cpp */; };
+		6E21074C1CB5F1EC0040F2DC /* BaseAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E21074A1CB5F1EC0040F2DC /* BaseAOI.cpp */; };
+		6E2107621CB5FE240040F2DC /* BaseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107601CB5FE240040F2DC /* BaseTest.cpp */; };
+		6E2107651CB657BF0040F2DC /* XYListAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107631CB657BF0040F2DC /* XYListAOIService.cpp */; };
+		6E2107A21CB742CE0040F2DC /* EuDistance_XYList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107A11CB742CE0040F2DC /* EuDistance_XYList.cpp */; };
+		6EB8D7EB1CB4A4C400EE30DE /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7E71CB4A4C400EE30DE /* GameObject.cpp */; };
+		6EB8D7EC1CB4A4C400EE30DE /* GameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7E91CB4A4C400EE30DE /* GameWorld.cpp */; };
+		6EB8D7F11CB50DFA00EE30DE /* XYListAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7EF1CB50DFA00EE30DE /* XYListAOI.cpp */; };
+		6ED2A0191CBF438600666687 /* TowerAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2A0171CBF438600666687 /* TowerAOIService.cpp */; };
+		6ED2A01B1CBF445C00666687 /* EuDistance_TowerAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2A01A1CBF445C00666687 /* EuDistance_TowerAOI.cpp */; };
+		6ED432561CB34FE400115051 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED432551CB34FE400115051 /* main.cpp */; };
+		6ED4326B1CB3540C00115051 /* EuDistanceAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED432691CB3540C00115051 /* EuDistanceAOI.cpp */; };
+		6ED432711CB3902400115051 /* AOIEventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4326F1CB3902400115051 /* AOIEventManager.cpp */; };
+		6ED432781CB3971900115051 /* EuDistanceAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED432761CB3971900115051 /* EuDistanceAOIService.cpp */; };
+		6ED4327B1CB3A3A600115051 /* AOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED432791CB3A3A600115051 /* AOIService.cpp */; };
+		6ED9AB511CBC9EF600380DE8 /* XYOrthogonalListAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9AB4F1CBC9EF600380DE8 /* XYOrthogonalListAOI.cpp */; };
+		6EDB9FB81CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EDB9FB71CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp */; };
+		6EDB9FBB1CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EDB9FB91CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6ED432501CB34FE400115051 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6E0A43E81CBE20DD00276861 /* TowerAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowerAOI.cpp; sourceTree = "<group>"; };
+		6E0A43E91CBE20DD00276861 /* TowerAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TowerAOI.hpp; sourceTree = "<group>"; };
+		6E0A43EB1CBE21D000276861 /* Tower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tower.cpp; sourceTree = "<group>"; };
+		6E0A43EC1CBE21D000276861 /* Tower.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tower.hpp; sourceTree = "<group>"; };
+		6E21074A1CB5F1EC0040F2DC /* BaseAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseAOI.cpp; sourceTree = "<group>"; };
+		6E21074B1CB5F1EC0040F2DC /* BaseAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseAOI.hpp; sourceTree = "<group>"; };
+		6E2107601CB5FE240040F2DC /* BaseTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseTest.cpp; sourceTree = "<group>"; };
+		6E2107611CB5FE240040F2DC /* BaseTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseTest.hpp; sourceTree = "<group>"; };
+		6E2107631CB657BF0040F2DC /* XYListAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYListAOIService.cpp; sourceTree = "<group>"; };
+		6E2107641CB657BF0040F2DC /* XYListAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XYListAOIService.hpp; sourceTree = "<group>"; };
+		6E2107A11CB742CE0040F2DC /* EuDistance_XYList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistance_XYList.cpp; sourceTree = "<group>"; };
+		6EB8D7E71CB4A4C400EE30DE /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		6EB8D7E81CB4A4C400EE30DE /* GameObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
+		6EB8D7E91CB4A4C400EE30DE /* GameWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameWorld.cpp; sourceTree = "<group>"; };
+		6EB8D7EA1CB4A4C400EE30DE /* GameWorld.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameWorld.hpp; sourceTree = "<group>"; };
+		6EB8D7EF1CB50DFA00EE30DE /* XYListAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYListAOI.cpp; sourceTree = "<group>"; };
+		6EB8D7F01CB50DFA00EE30DE /* XYListAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XYListAOI.hpp; sourceTree = "<group>"; };
+		6ED2A0171CBF438600666687 /* TowerAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowerAOIService.cpp; sourceTree = "<group>"; };
+		6ED2A0181CBF438600666687 /* TowerAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TowerAOIService.hpp; sourceTree = "<group>"; };
+		6ED2A01A1CBF445C00666687 /* EuDistance_TowerAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistance_TowerAOI.cpp; sourceTree = "<group>"; };
+		6ED432521CB34FE400115051 /* AOIs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AOIs; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED432551CB34FE400115051 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6ED4325C1CB3501C00115051 /* alias.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = alias.h; sourceTree = "<group>"; };
+		6ED432691CB3540C00115051 /* EuDistanceAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistanceAOI.cpp; sourceTree = "<group>"; };
+		6ED4326A1CB3540C00115051 /* EuDistanceAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EuDistanceAOI.hpp; sourceTree = "<group>"; };
+		6ED4326F1CB3902400115051 /* AOIEventManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AOIEventManager.cpp; sourceTree = "<group>"; };
+		6ED432701CB3902400115051 /* AOIEventManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AOIEventManager.hpp; sourceTree = "<group>"; };
+		6ED432761CB3971900115051 /* EuDistanceAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistanceAOIService.cpp; sourceTree = "<group>"; };
+		6ED432771CB3971900115051 /* EuDistanceAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EuDistanceAOIService.hpp; sourceTree = "<group>"; };
+		6ED432791CB3A3A600115051 /* AOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AOIService.cpp; sourceTree = "<group>"; };
+		6ED4327A1CB3A3A600115051 /* AOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AOIService.hpp; sourceTree = "<group>"; };
+		6ED9AB4F1CBC9EF600380DE8 /* XYOrthogonalListAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYOrthogonalListAOI.cpp; sourceTree = "<group>"; };
+		6ED9AB501CBC9EF600380DE8 /* XYOrthogonalListAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XYOrthogonalListAOI.hpp; sourceTree = "<group>"; };
+		6EDB9FB71CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYList_XYOrthogonalList.cpp; sourceTree = "<group>"; };
+		6EDB9FB91CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYOrthogonalListAOIService.cpp; sourceTree = "<group>"; };
+		6EDB9FBA1CBDE57600D12F68 /* XYOrthogonalListAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XYOrthogonalListAOIService.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6ED4324F1CB34FE400115051 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E0A43E71CBE20BF00276861 /* TowerAOI */ = {
+			isa = PBXGroup;
+			children = (
+				6E0A43EC1CBE21D000276861 /* Tower.hpp */,
+				6E0A43EB1CBE21D000276861 /* Tower.cpp */,
+				6E0A43E91CBE20DD00276861 /* TowerAOI.hpp */,
+				6E0A43E81CBE20DD00276861 /* TowerAOI.cpp */,
+			);
+			path = TowerAOI;
+			sourceTree = "<group>";
+		};
+		6E2107491CB5F1E10040F2DC /* BaseAOI */ = {
+			isa = PBXGroup;
+			children = (
+				6E21074B1CB5F1EC0040F2DC /* BaseAOI.hpp */,
+				6E21074A1CB5F1EC0040F2DC /* BaseAOI.cpp */,
+			);
+			path = BaseAOI;
+			sourceTree = "<group>";
+		};
+		6EB8D7E61CB4A4C400EE30DE /* GameBasics */ = {
+			isa = PBXGroup;
+			children = (
+				6EB8D7E81CB4A4C400EE30DE /* GameObject.hpp */,
+				6EB8D7E71CB4A4C400EE30DE /* GameObject.cpp */,
+				6EB8D7EA1CB4A4C400EE30DE /* GameWorld.hpp */,
+				6EB8D7E91CB4A4C400EE30DE /* GameWorld.cpp */,
+			);
+			path = GameBasics;
+			sourceTree = "<group>";
+		};
+		6EB8D7ED1CB50DCE00EE30DE /* XYListAOI */ = {
+			isa = PBXGroup;
+			children = (
+				6EB8D7F01CB50DFA00EE30DE /* XYListAOI.hpp */,
+				6EB8D7EF1CB50DFA00EE30DE /* XYListAOI.cpp */,
+			);
+			path = XYListAOI;
+			sourceTree = "<group>";
+		};
+		6EB8D7EE1CB50DD800EE30DE /* XYOrthogonalListAOI */ = {
+			isa = PBXGroup;
+			children = (
+				6ED9AB501CBC9EF600380DE8 /* XYOrthogonalListAOI.hpp */,
+				6ED9AB4F1CBC9EF600380DE8 /* XYOrthogonalListAOI.cpp */,
+			);
+			path = XYOrthogonalListAOI;
+			sourceTree = "<group>";
+		};
+		6ED432491CB34FE400115051 = {
+			isa = PBXGroup;
+			children = (
+				6ED432541CB34FE400115051 /* AOIs */,
+				6ED432531CB34FE400115051 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6ED432531CB34FE400115051 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6ED432521CB34FE400115051 /* AOIs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6ED432541CB34FE400115051 /* AOIs */ = {
+			isa = PBXGroup;
+			children = (
+				6ED432551CB34FE400115051 /* main.cpp */,
+				6ED4325C1CB3501C00115051 /* alias.h */,
+				6ED432701CB3902400115051 /* AOIEventManager.hpp */,
+				6ED4326F1CB3902400115051 /* AOIEventManager.cpp */,
+				6EB8D7E61CB4A4C400EE30DE /* GameBasics */,
+				6ED432751CB396ED00115051 /* AOIServices */,
+				6ED432721CB3967800115051 /* Tests */,
+				6ED432671CB3540C00115051 /* AOIModels */,
+			);
+			path = AOIs;
+			sourceTree = "<group>";
+		};
+		6ED432671CB3540C00115051 /* AOIModels */ = {
+			isa = PBXGroup;
+			children = (
+				6E0A43E71CBE20BF00276861 /* TowerAOI */,
+				6E2107491CB5F1E10040F2DC /* BaseAOI */,
+				6EB8D7EE1CB50DD800EE30DE /* XYOrthogonalListAOI */,
+				6EB8D7ED1CB50DCE00EE30DE /* XYListAOI */,
+				6ED432681CB3540C00115051 /* EuDistanceAOI */,
+			);
+			path = AOIModels;
+			sourceTree = "<group>";
+		};
+		6ED432681CB3540C00115051 /* EuDistanceAOI */ = {
+			isa = PBXGroup;
+			children = (
+				6ED4326A1CB3540C00115051 /* EuDistanceAOI.hpp */,
+				6ED432691CB3540C00115051 /* EuDistanceAOI.cpp */,
+			);
+			path = EuDistanceAOI;
+			sourceTree = "<group>";
+		};
+		6ED432721CB3967800115051 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6E2107611CB5FE240040F2DC /* BaseTest.hpp */,
+				6E2107601CB5FE240040F2DC /* BaseTest.cpp */,
+				6E2107A11CB742CE0040F2DC /* EuDistance_XYList.cpp */,
+				6EDB9FB71CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp */,
+				6ED2A01A1CBF445C00666687 /* EuDistance_TowerAOI.cpp */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6ED432751CB396ED00115051 /* AOIServices */ = {
+			isa = PBXGroup;
+			children = (
+				6ED4327A1CB3A3A600115051 /* AOIService.hpp */,
+				6ED432791CB3A3A600115051 /* AOIService.cpp */,
+				6ED432771CB3971900115051 /* EuDistanceAOIService.hpp */,
+				6ED432761CB3971900115051 /* EuDistanceAOIService.cpp */,
+				6E2107641CB657BF0040F2DC /* XYListAOIService.hpp */,
+				6E2107631CB657BF0040F2DC /* XYListAOIService.cpp */,
+				6EDB9FBA1CBDE57600D12F68 /* XYOrthogonalListAOIService.hpp */,
+				6EDB9FB91CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp */,
+				6ED2A0181CBF438600666687 /* TowerAOIService.hpp */,
+				6ED2A0171CBF438600666687 /* TowerAOIService.cpp */,
+			);
+			path = AOIServices;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6ED432511CB34FE400115051 /* AOIs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6ED432591CB34FE400115051 /* Build configuration list for PBXNativeTarget "AOIs" */;
+			buildPhases = (
+				6ED4324E1CB34FE400115051 /* Sources */,
+				6ED4324F1CB34FE400115051 /* Frameworks */,
+				6ED432501CB34FE400115051 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AOIs;
+			productName = AOIs;
+			productReference = 6ED432521CB34FE400115051 /* AOIs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6ED4324A1CB34FE400115051 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Zhejiang University";
+				TargetAttributes = {
+					6ED432511CB34FE400115051 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 6ED4324D1CB34FE400115051 /* Build configuration list for PBXProject "AOIs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6ED432491CB34FE400115051;
+			productRefGroup = 6ED432531CB34FE400115051 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6ED432511CB34FE400115051 /* AOIs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6ED4324E1CB34FE400115051 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2107651CB657BF0040F2DC /* XYListAOIService.cpp in Sources */,
+				6EDB9FBB1CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp in Sources */,
+				6EB8D7EC1CB4A4C400EE30DE /* GameWorld.cpp in Sources */,
+				6ED4327B1CB3A3A600115051 /* AOIService.cpp in Sources */,
+				6ED4326B1CB3540C00115051 /* EuDistanceAOI.cpp in Sources */,
+				6EDB9FB81CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp in Sources */,
+				6ED432561CB34FE400115051 /* main.cpp in Sources */,
+				6E0A43EA1CBE20DD00276861 /* TowerAOI.cpp in Sources */,
+				6E21074C1CB5F1EC0040F2DC /* BaseAOI.cpp in Sources */,
+				6EB8D7F11CB50DFA00EE30DE /* XYListAOI.cpp in Sources */,
+				6E2107621CB5FE240040F2DC /* BaseTest.cpp in Sources */,
+				6ED2A0191CBF438600666687 /* TowerAOIService.cpp in Sources */,
+				6E2107A21CB742CE0040F2DC /* EuDistance_XYList.cpp in Sources */,
+				6ED432711CB3902400115051 /* AOIEventManager.cpp in Sources */,
+				6ED2A01B1CBF445C00666687 /* EuDistance_TowerAOI.cpp in Sources */,
+				6E0A43ED1CBE21D000276861 /* Tower.cpp in Sources */,
+				6ED9AB511CBC9EF600380DE8 /* XYOrthogonalListAOI.cpp in Sources */,
+				6ED432781CB3971900115051 /* EuDistanceAOIService.cpp in Sources */,
+				6EB8D7EB1CB4A4C400EE30DE /* GameObject.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6ED432571CB34FE400115051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6ED432581CB34FE400115051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6ED4325A1CB34FE400115051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6ED4325B1CB34FE400115051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6ED4324D1CB34FE400115051 /* Build configuration list for PBXProject "AOIs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ED432571CB34FE400115051 /* Debug */,
+				6ED432581CB34FE400115051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ED432591CB34FE400115051 /* Build configuration list for PBXNativeTarget "AOIs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ED4325A1CB34FE400115051 /* Debug */,
+				6ED4325B1CB34FE400115051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6ED4324A1CB34FE400115051 /* Project object */;
+}
