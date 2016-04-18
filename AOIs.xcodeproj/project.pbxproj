@@ -13,6 +13,9 @@
 		6E2107621CB5FE240040F2DC /* BaseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107601CB5FE240040F2DC /* BaseTest.cpp */; };
 		6E2107651CB657BF0040F2DC /* XYListAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107631CB657BF0040F2DC /* XYListAOIService.cpp */; };
 		6E2107A21CB742CE0040F2DC /* EuDistance_XYList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107A11CB742CE0040F2DC /* EuDistance_XYList.cpp */; };
+		6E8BCBBD1CC0830600459D90 /* TowerHexagonAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8BCBBB1CC0830600459D90 /* TowerHexagonAOI.cpp */; };
+		6E984D691CC48B4700291009 /* TowerHexagonAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E984D671CC48B4700291009 /* TowerHexagonAOIService.cpp */; };
+		6E984D6F1CC4D4A800291009 /* NTreeAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E984D6D1CC4D4A800291009 /* NTreeAOI.cpp */; };
 		6EB8D7EB1CB4A4C400EE30DE /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7E71CB4A4C400EE30DE /* GameObject.cpp */; };
 		6EB8D7EC1CB4A4C400EE30DE /* GameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7E91CB4A4C400EE30DE /* GameWorld.cpp */; };
 		6EB8D7F11CB50DFA00EE30DE /* XYListAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7EF1CB50DFA00EE30DE /* XYListAOI.cpp */; };
@@ -52,6 +55,12 @@
 		6E2107631CB657BF0040F2DC /* XYListAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYListAOIService.cpp; sourceTree = "<group>"; };
 		6E2107641CB657BF0040F2DC /* XYListAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XYListAOIService.hpp; sourceTree = "<group>"; };
 		6E2107A11CB742CE0040F2DC /* EuDistance_XYList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistance_XYList.cpp; sourceTree = "<group>"; };
+		6E8BCBBB1CC0830600459D90 /* TowerHexagonAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowerHexagonAOI.cpp; sourceTree = "<group>"; };
+		6E8BCBBC1CC0830600459D90 /* TowerHexagonAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TowerHexagonAOI.hpp; sourceTree = "<group>"; };
+		6E984D671CC48B4700291009 /* TowerHexagonAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowerHexagonAOIService.cpp; sourceTree = "<group>"; };
+		6E984D681CC48B4700291009 /* TowerHexagonAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TowerHexagonAOIService.hpp; sourceTree = "<group>"; };
+		6E984D6D1CC4D4A800291009 /* NTreeAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NTreeAOI.cpp; sourceTree = "<group>"; };
+		6E984D6E1CC4D4A800291009 /* NTreeAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NTreeAOI.hpp; sourceTree = "<group>"; };
 		6EB8D7E71CB4A4C400EE30DE /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
 		6EB8D7E81CB4A4C400EE30DE /* GameObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
 		6EB8D7E91CB4A4C400EE30DE /* GameWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameWorld.cpp; sourceTree = "<group>"; };
@@ -108,6 +117,24 @@
 				6E21074A1CB5F1EC0040F2DC /* BaseAOI.cpp */,
 			);
 			path = BaseAOI;
+			sourceTree = "<group>";
+		};
+		6E8BCBBA1CC082F000459D90 /* TowerHexagonAOI */ = {
+			isa = PBXGroup;
+			children = (
+				6E8BCBBC1CC0830600459D90 /* TowerHexagonAOI.hpp */,
+				6E8BCBBB1CC0830600459D90 /* TowerHexagonAOI.cpp */,
+			);
+			path = TowerHexagonAOI;
+			sourceTree = "<group>";
+		};
+		6E984D6C1CC4D49C00291009 /* NTreeAOI */ = {
+			isa = PBXGroup;
+			children = (
+				6E984D6E1CC4D4A800291009 /* NTreeAOI.hpp */,
+				6E984D6D1CC4D4A800291009 /* NTreeAOI.cpp */,
+			);
+			path = NTreeAOI;
 			sourceTree = "<group>";
 		};
 		6EB8D7E61CB4A4C400EE30DE /* GameBasics */ = {
@@ -173,6 +200,8 @@
 		6ED432671CB3540C00115051 /* AOIModels */ = {
 			isa = PBXGroup;
 			children = (
+				6E984D6C1CC4D49C00291009 /* NTreeAOI */,
+				6E8BCBBA1CC082F000459D90 /* TowerHexagonAOI */,
 				6E0A43E71CBE20BF00276861 /* TowerAOI */,
 				6E2107491CB5F1E10040F2DC /* BaseAOI */,
 				6EB8D7EE1CB50DD800EE30DE /* XYOrthogonalListAOI */,
@@ -216,6 +245,8 @@
 				6EDB9FB91CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp */,
 				6ED2A0181CBF438600666687 /* TowerAOIService.hpp */,
 				6ED2A0171CBF438600666687 /* TowerAOIService.cpp */,
+				6E984D681CC48B4700291009 /* TowerHexagonAOIService.hpp */,
+				6E984D671CC48B4700291009 /* TowerHexagonAOIService.cpp */,
 			);
 			path = AOIServices;
 			sourceTree = "<group>";
@@ -280,6 +311,7 @@
 				6EDB9FBB1CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp in Sources */,
 				6EB8D7EC1CB4A4C400EE30DE /* GameWorld.cpp in Sources */,
 				6ED4327B1CB3A3A600115051 /* AOIService.cpp in Sources */,
+				6E8BCBBD1CC0830600459D90 /* TowerHexagonAOI.cpp in Sources */,
 				6ED4326B1CB3540C00115051 /* EuDistanceAOI.cpp in Sources */,
 				6EDB9FB81CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp in Sources */,
 				6ED432561CB34FE400115051 /* main.cpp in Sources */,
@@ -288,6 +320,8 @@
 				6EB8D7F11CB50DFA00EE30DE /* XYListAOI.cpp in Sources */,
 				6E2107621CB5FE240040F2DC /* BaseTest.cpp in Sources */,
 				6ED2A0191CBF438600666687 /* TowerAOIService.cpp in Sources */,
+				6E984D691CC48B4700291009 /* TowerHexagonAOIService.cpp in Sources */,
+				6E984D6F1CC4D4A800291009 /* NTreeAOI.cpp in Sources */,
 				6E2107A21CB742CE0040F2DC /* EuDistance_XYList.cpp in Sources */,
 				6ED432711CB3902400115051 /* AOIEventManager.cpp in Sources */,
 				6ED2A01B1CBF445C00666687 /* EuDistance_TowerAOI.cpp in Sources */,

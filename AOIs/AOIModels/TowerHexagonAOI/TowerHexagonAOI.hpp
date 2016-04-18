@@ -1,25 +1,25 @@
 //
-//  TowerAOI.hpp
+//  TowerHexagonAOI.hpp
 //  AOIs
 //
-//  Created by zklgame on 4/13/16.
+//  Created by zklgame on 4/15/16.
 //  Copyright © 2016 Zhejiang University. All rights reserved.
 //
 
-#ifndef TowerAOI_hpp
-#define TowerAOI_hpp
+#ifndef TowerHexagonAOI_hpp
+#define TowerHexagonAOI_hpp
 
 #include "../BaseAOI/BaseAOI.hpp"
-#include "Tower.hpp"
+#include "../TowerAOI/Tower.hpp"
 
-class TowerAOI: public BaseAOI {
+class TowerHexagonAOI: public BaseAOI {
 public:
-    TowerAOI(position_t worldWidth, position_t worldHeight, position_t towerWidth, position_t towerHeight);
-    virtual ~TowerAOI();
+    TowerHexagonAOI(position_t worldWidth, position_t worldHeight, position_t towerLength);
+    virtual ~TowerHexagonAOI();
     
 private:
     position_t worldWidth, worldHeight;
-    position_t towerWidth, towerHeight;
+    position_t towerLength;
     position_t towerX, towerY; // record the number of towers in X and Y
     map<position_t, map<position_t, Tower*> > towers;
     
@@ -39,13 +39,16 @@ private:
     // MOVE: find by position
     map<entity_t, GameObject *> findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY);
     map<entity_t, GameObject *> findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range);
-    
-    bool isFullCoveredTower(position_t posX, position_t posY, position_t range, position_t pos1X, position_t pos1Y, position_t pos2X, position_t pos2Y);
-    bool isPartialCoveredTower(position_t posX, position_t posY, position_t range, position_t pos1X, position_t pos1Y, position_t pos2X, position_t pos2Y);
+
+    bool isFullCoveredTower(position_t posX, position_t posY, position_t range, position_t centerX, position_t centerY);
+    bool isPartialCoveredTower(position_t posX, position_t posY, position_t range, position_t centerX, position_t centerY);
     bool isCoveredBySide(position_t posX, position_t posY, position_t range, position_t pos1X, position_t pos1Y, position_t pos2X, position_t pos2Y);
     
     bool classifyTower(position_t posX, position_t posY, position_t range, int i, int j, list<Tower*> &fullCoveredTowers, list<Tower*> &partialCoveredTowers);
     
+    void getTowerPosByXY(position_t posX, position_t posY, position_t &i, position_t &j);
+    position_t getDistance(position_t posX, position_t posY, position_t anotherPosX, position_t anotherPosY);
+    void getCenterByTowerPos(position_t i, position_t j, position_t &centerX, position_t &centerY);
 };
 
-#endif /* TowerAOI_hpp */
+#endif /* TowerHexagonAOI_hpp */

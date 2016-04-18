@@ -8,6 +8,8 @@
 
 #include "TowerAOI.hpp"
 
+#include <cmath>
+
 TowerAOI::TowerAOI(position_t worldWidth, position_t worldHeight, position_t towerWidth, position_t towerHeight): worldWidth(worldWidth), worldHeight(worldHeight), towerWidth(towerWidth), towerHeight(towerHeight) {
     // tower range: [ ... )
     this -> towerX = worldWidth / towerWidth + 1;
@@ -283,11 +285,29 @@ bool TowerAOI::isPartialCoveredTower(position_t posX, position_t posY, position_
     }
     
     // side in circle
+    if ((isCoveredBySide(posX, posY, range, pos1X, pos1Y, pos2X, pos2Y)) ||
+        (isCoveredBySide(posX, posY, range, pos2X, pos1Y, pos1X, pos2Y)) ||
+        (isCoveredBySide(posY, posX, range, pos1Y, pos1X, pos2Y, pos2X)) ||
+        (isCoveredBySide(posY, posX, range, pos2Y, pos1X, pos1Y, pos2X))) {
+        return true;
+    }
+    
+    
     if ((isInRange(posX, pos1X, range)) ||
         (isInRange(posX, pos2X, range)) ||
         (isInRange(posY, pos1Y, range)) ||
         (isInRange(posY, pos2Y, range))) {
         return true;
+    }
+    
+    return false;
+}
+
+bool TowerAOI::isCoveredBySide(position_t posX, position_t posY, position_t range, position_t pos1X, position_t pos1Y, position_t pos2X, position_t pos2Y) {
+    if (isInRange(posX, pos1X, range)) {
+        position_t dis2 = range * range - (posX - pos1X) * (posX - pos1X);
+        position_t testposY = sqrt(dis2) + posY;
+        return (testposY * testposY) >= pos1Y * pos1Y && (testposY * testposY) <= pos2Y * pos2Y;
     }
     
     return false;

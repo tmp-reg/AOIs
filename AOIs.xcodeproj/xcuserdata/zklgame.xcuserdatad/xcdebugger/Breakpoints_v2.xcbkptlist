@@ -1359,7 +1359,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
             endingLineNumber = "131"
-            landmarkName = "main1()"
+            landmarkName = "main()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1370,11 +1370,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482297179.030728"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "TowerAOI::onPublisherMove(GameObject *obj, position_t oldPosX, position_t oldPosY)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1391,7 +1391,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1407,7 +1407,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1423,7 +1423,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
             endingLineNumber = "75"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1439,7 +1439,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1455,7 +1455,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1471,7 +1471,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1487,7 +1487,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1503,7 +1503,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1519,7 +1519,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1535,7 +1535,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
             endingLineNumber = "73"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1551,7 +1551,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1567,7 +1567,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
             endingLineNumber = "76"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1583,7 +1583,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1599,7 +1599,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1615,7 +1615,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1626,23 +1626,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482306829.355609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "TowerAOI::addPublisher(GameObject *obj)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482306889.644482"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -1658,43 +1642,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482306927.618994"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "TowerAOI::findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482311133.798001"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "TowerAOI::findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482306950.593501"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "TowerAOI::addPublisher(GameObject *obj)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1706,11 +1658,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482306952.320048"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "TowerAOI::findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
+            timestampString = "482338762.288451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "TowerAOI::findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
+            timestampString = "482338762.288451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "TowerAOI::addPublisher(GameObject *obj)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
+            timestampString = "482338762.288451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "TowerAOI::addSubscriber(GameObject *obj)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1722,7 +1722,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482306966.428795"
+            timestampString = "482338762.288451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "TowerAOI::addSubscriber(GameObject *obj)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -1738,27 +1754,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482306967.585293"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "TowerAOI::addSubscriber(GameObject *obj)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482311133.798001"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "TowerAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1770,11 +1770,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482311133.798001"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "TowerAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1786,11 +1786,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482311133.798001"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "TowerAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1802,11 +1802,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482312451.113337"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "TowerAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1818,11 +1818,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482312451.113337"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "TowerAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1839,7 +1839,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
-            landmarkName = "main()"
+            landmarkName = "main3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1850,11 +1850,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482311133.798001"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "TowerAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1866,11 +1866,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482311133.798001"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "TowerAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1882,13 +1882,157 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerAOI/TowerAOI.cpp"
-            timestampString = "482311133.798001"
+            timestampString = "482338762.288451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "TowerAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
+            timestampString = "482654075.756542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "TowerHexagonAOI::addPublisher(GameObject *obj)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
+            timestampString = "482654075.756542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "TowerHexagonAOI::addSubscriber(GameObject *obj)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
+            timestampString = "482654075.756542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "TowerHexagonAOI::addPublisher(GameObject *obj)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
+            timestampString = "482654075.756542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "TowerHexagonAOI::addSubscriber(GameObject *obj)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
+            timestampString = "482654075.756542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "TowerHexagonAOI::addPublisher(GameObject *obj)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
+            timestampString = "482660609.33293"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "435"
+            endingLineNumber = "435"
+            landmarkName = "TowerHexagonAOI::getDistance(position_t posX, position_t posY, position_t anotherPosX, position_t anotherPosY)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
+            timestampString = "482660609.33293"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "436"
+            endingLineNumber = "436"
+            landmarkName = "TowerHexagonAOI::getDistance(position_t posX, position_t posY, position_t anotherPosX, position_t anotherPosY)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
+            timestampString = "482660609.33293"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "439"
+            endingLineNumber = "439"
+            landmarkName = "TowerHexagonAOI::getCenterByTowerPos(position_t i, position_t j, position_t &amp;centerX, position_t &amp;centerY)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AOIs/Tests/EuDistance_TowerHexagonAOI.cpp"
+            timestampString = "482660469.153246"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "main()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

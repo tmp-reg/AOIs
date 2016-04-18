@@ -15,7 +15,7 @@
 
 using namespace std;
 
-int main() {
+int main1() {
     
     // create object data
     entity_t objectNum = 10000;
