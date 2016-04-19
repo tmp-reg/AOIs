@@ -48,8 +48,18 @@ protected:
         return distance2 <= range * range;
     }
     
+    inline virtual bool isInRange2WithDouble(double posX, double posY, double otherPosX, double otherPosY, double range) {
+        double distance2 = (posX - otherPosX) * (posX - otherPosX) + (posY - otherPosY) * (posY - otherPosY);
+        return distance2 <= range * range;
+    }
+    
     inline virtual bool isInRange(position_t pos, position_t otherPos, position_t range) {
         position_t del = pos >= otherPos ? pos - otherPos : otherPos - pos;
+        return del <= range;
+    }
+    
+    inline virtual bool isInRangeWithDouble(double pos, double otherPos, double range) {
+        double del = pos >= otherPos ? pos - otherPos : otherPos - pos;
         return del <= range;
     }
     

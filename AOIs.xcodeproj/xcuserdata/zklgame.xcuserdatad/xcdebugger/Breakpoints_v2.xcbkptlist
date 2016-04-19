@@ -1978,12 +1978,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
-            timestampString = "482660609.33293"
+            timestampString = "482726090.483377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "435"
-            endingLineNumber = "435"
-            landmarkName = "TowerHexagonAOI::getDistance(position_t posX, position_t posY, position_t anotherPosX, position_t anotherPosY)"
+            startingLineNumber = "462"
+            endingLineNumber = "462"
+            landmarkName = "TowerHexagonAOI::getDistance(double posX, double posY, double anotherPosX, double anotherPosY)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1994,12 +1994,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
-            timestampString = "482660609.33293"
+            timestampString = "482726090.483377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "436"
-            endingLineNumber = "436"
-            landmarkName = "TowerHexagonAOI::getDistance(position_t posX, position_t posY, position_t anotherPosX, position_t anotherPosY)"
+            startingLineNumber = "463"
+            endingLineNumber = "463"
+            landmarkName = "TowerHexagonAOI::getDistance(double posX, double posY, double anotherPosX, double anotherPosY)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2010,12 +2010,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/AOIModels/TowerHexagonAOI/TowerHexagonAOI.cpp"
-            timestampString = "482660609.33293"
+            timestampString = "482726090.483377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "439"
-            endingLineNumber = "439"
-            landmarkName = "TowerHexagonAOI::getCenterByTowerPos(position_t i, position_t j, position_t &amp;centerX, position_t &amp;centerY)"
+            startingLineNumber = "466"
+            endingLineNumber = "466"
+            landmarkName = "TowerHexagonAOI::getCenterByTowerPos(position_t i, position_t j, double &amp;centerX, double &amp;centerY)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2026,11 +2026,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOIs/Tests/EuDistance_TowerHexagonAOI.cpp"
-            timestampString = "482660469.153246"
+            timestampString = "482728078.62001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "main()"
             landmarkType = "7">
          </BreakpointContent>

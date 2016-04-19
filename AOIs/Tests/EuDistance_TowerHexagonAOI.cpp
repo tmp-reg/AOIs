@@ -1,21 +1,19 @@
 //
-//  EuDistance_TowerAOI.cpp
+//  EuDistance_TowerHexagonAOI.cpp
 //  AOIs
 //
-//  Created by zklgame on 4/14/16.
+//  Created by zklgame on 4/19/16.
 //  Copyright © 2016 Zhejiang University. All rights reserved.
 //
 
 #include "../GameBasics/GameWorld.hpp"
 #include "../AOIServices/EuDistanceAOIService.hpp"
-#include "../AOIServices/TowerAOIService.hpp"
+#include "../AOIServices/TowerHexagonAOIService.hpp"
 
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-int main3() {
+int main() {
     // create object data
     entity_t objectNum = 10000;
     entity_t movedNum = 5000;
@@ -63,7 +61,7 @@ int main3() {
     GameWorld *world1 = new GameWorld();
     world1 -> aoi = new EuDistanceAOIService();
     GameWorld * world2 = new GameWorld();
-    world2 -> aoi = new TowerAOIService(10000, 10000, 100, 100);
+    world2 -> aoi = new TowerHexagonAOIService(10000, 10000, 100);
     
     //////////////////////
     // test addObject
@@ -73,10 +71,9 @@ int main3() {
         world1 -> addObject(*iter);
     }
     for (iter = gameObjectsCopy2 . begin(); iter != gameObjectsCopy2 . end(); iter ++) {
-        //cout << (*iter) -> id << " " << (*iter) -> posX << " " << (*iter) -> posY << " " << uint16_t((*iter) -> type) << endl;
         world2 -> addObject(*iter);
     }
-
+    
     bool isAddRight = true;
     for (int i = 0; i < objectNum; i ++) {
         if (gameObjects[i] -> messageNum == gameObjectsCopy2[i] -> messageNum &&
@@ -86,7 +83,6 @@ int main3() {
             
         } else {
             cout << "isAddRight : FALSE!!! at " << i << endl << endl;
-            
             isAddRight = false;
             return 1;
         }
@@ -95,7 +91,6 @@ int main3() {
     cout << "??????????????????????????????????" << endl;
     cout << "ADD OBJECT PASS" << endl;
     cout << "??????????????????????????????????" << endl << endl;
-    
     
     //////////////////////
     // test moveObject
@@ -161,24 +156,3 @@ int main3() {
     
     return 0;
 }
-
-//
-////test code
-//cout << gameObjects[i] -> id << " | " << uint16_t(gameObjects[i] -> type) << " | " << gameObjects[i] -> posX << " | " << gameObjects[i] -> posY << " | " << gameObjects[i] -> range << " | " << gameObjects[i] -> messageNum << " | " << gameObjects[i] -> addMessageNum << " | " << gameObjects[i] -> moveMessageNum << " | " << gameObjects[i] -> leaveMessageNum << endl;
-//
-//cout << i << " | " << uint16_t(gameObjectsCopy2[i] -> type) << " | " << gameObjectsCopy2[i] -> posX << " | " << gameObjectsCopy2[i] -> posY << " | " << gameObjectsCopy2[i] -> range << " | " << gameObjectsCopy2[i] -> messageNum << " | " << gameObjectsCopy2[i] -> addMessageNum << " | " << gameObjectsCopy2[i] -> moveMessageNum << " | " << gameObjectsCopy2[i] -> leaveMessageNum << endl;
-//
-//map<entity_t, entity_t>::iterator listIter;
-//cout << "more: " << endl;
-//for (listIter = gameObjectsCopy2[i] -> addMessageDetail . begin(); listIter != gameObjectsCopy2[i] -> addMessageDetail . end(); listIter ++) {
-//    if (gameObjects[i] -> addMessageDetail . find(listIter -> first) == gameObjects[i] -> addMessageDetail . end()) {
-//        cout << listIter -> first << " | " << uint16_t(gameObjectsCopy2[listIter -> first] -> type) << " | " << gameObjectsCopy2[listIter -> first] -> posX << " | " << gameObjectsCopy2[listIter -> first] -> posY << endl;
-//    }
-//}
-//
-//cout << "less: " << endl;
-//for (listIter = gameObjects[i] -> addMessageDetail . begin(); listIter != gameObjects[i] -> addMessageDetail . end(); listIter ++) {
-//    if (gameObjectsCopy2[i] -> addMessageDetail . find(listIter -> first) == gameObjectsCopy2[i] -> addMessageDetail . end()) {
-//        cout << listIter -> first << " | " << uint16_t(gameObjectsCopy2[listIter -> first] -> type) << " | " << gameObjectsCopy2[listIter -> first] -> posX << " | " << gameObjectsCopy2[listIter -> first] -> posY << endl;
-//    }
-//}

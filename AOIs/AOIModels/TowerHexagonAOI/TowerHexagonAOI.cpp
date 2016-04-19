@@ -206,16 +206,26 @@ map<entity_t, GameObject *> TowerHexagonAOI::findPublishersInRange(entity_t objI
     getTowerPosByXY(posX, posY, towerPosX, towerPosY);
     
     position_t i, j;
+    int times;
+    
     for (i = towerPosX; i < this -> towerX; i ++) {
+        times = 0;
         for (j = towerPosY; j < this -> towerY; j ++) {
             if (!classifyTower(posX, posY, range, i, j, fullCoveredTowers, partialCoveredTowers)) {
-                break;
+                times ++;
+                if (times >= 2) {
+                    break;
+                }
             }
         }
         if (towerPosY != 0) {
+            times = 0;
             for (j = towerPosY - 1; j != 0; j --) {
                 if (!classifyTower(posX, posY, range, i, j, fullCoveredTowers, partialCoveredTowers)) {
-                    break;
+                    times ++;
+                    if (times >= 2) {
+                        break;
+                    }
                 }
             }
             if (0 == j) {
@@ -225,15 +235,23 @@ map<entity_t, GameObject *> TowerHexagonAOI::findPublishersInRange(entity_t objI
     }
     if (towerPosX != 0) {
         for (i = towerPosX - 1; i != 0; i --) {
+            times = 0;
             for (j = towerPosY; j < this -> towerY; j ++) {
                 if (!classifyTower(posX, posY, range, i, j, fullCoveredTowers, partialCoveredTowers)) {
-                    break;
+                    times ++;
+                    if (times >= 2) {
+                        break;
+                    }
                 }
             }
             if (towerPosY != 0) {
+                times = 0;
                 for (j = towerPosY - 1; j != 0; j --) {
                     if (!classifyTower(posX, posY, range, i, j, fullCoveredTowers, partialCoveredTowers)) {
-                        break;
+                        times ++;
+                        if (times >= 2) {
+                            break;
+                        }
                     }
                 }
                 if (0 == j) {
@@ -242,15 +260,23 @@ map<entity_t, GameObject *> TowerHexagonAOI::findPublishersInRange(entity_t objI
             }
         }
         if (0 == i) {
+            times = 0;
             for (j = towerPosY; j < this -> towerY; j ++) {
                 if (!classifyTower(posX, posY, range, i, j, fullCoveredTowers, partialCoveredTowers)) {
-                    break;
+                    times ++;
+                    if (times >= 2) {
+                        break;
+                    }
                 }
             }
             if (towerPosY != 0) {
+                times = 0;
                 for (j = towerPosY - 1; j != 0; j --) {
                     if (!classifyTower(posX, posY, range, i, j, fullCoveredTowers, partialCoveredTowers)) {
-                        break;
+                        times ++;
+                        if (times >= 2) {
+                            break;
+                        }
                     }
                 }
                 if (0 == j) {
@@ -259,6 +285,7 @@ map<entity_t, GameObject *> TowerHexagonAOI::findPublishersInRange(entity_t objI
             }
         }
     }
+    
     
     for (iter = fullCoveredTowers . begin(); iter != fullCoveredTowers . end(); iter ++) {
         pubs = addTwoMaps(pubs, (*iter) -> getPublishers());
@@ -279,27 +306,27 @@ map<entity_t, GameObject *> TowerHexagonAOI::findPublishersInRange(entity_t objI
     return pubs;
 }
 
-bool TowerHexagonAOI::isFullCoveredTower(position_t posX, position_t posY, position_t range, position_t centerX, position_t centerY) {
-    if ((isInRange2(posX, posY, centerX, centerY - towerLength, range)) &&
-        (isInRange2(posX, posY, centerX + sqrt(3) / 2 * towerLength, centerY - 0.5 * towerLength, range)) &&
-        (isInRange2(posX, posY, centerX + sqrt(3) / 2 * towerLength, centerY + 0.5 * towerLength, range)) &&
-        (isInRange2(posX, posY, centerX, centerY + towerLength, range)) &&
-        (isInRange2(posX, posY, centerX - sqrt(3) / 2 * towerLength, centerY + 0.5 * towerLength, range)) &&
-        (isInRange2(posX, posY, centerX - sqrt(3) / 2 * towerLength, centerY - 0.5 * towerLength, range))) {
+bool TowerHexagonAOI::isFullCoveredTower(position_t posX, position_t posY, position_t range, double centerX, double centerY) {
+    if ((isInRange2WithDouble(posX, posY, centerX, centerY - towerLength, range)) &&
+        (isInRange2WithDouble(posX, posY, centerX + sqrt(3) / 2 * towerLength, centerY - 0.5 * towerLength, range)) &&
+        (isInRange2WithDouble(posX, posY, centerX + sqrt(3) / 2 * towerLength, centerY + 0.5 * towerLength, range)) &&
+        (isInRange2WithDouble(posX, posY, centerX, centerY + towerLength, range)) &&
+        (isInRange2WithDouble(posX, posY, centerX - sqrt(3) / 2 * towerLength, centerY + 0.5 * towerLength, range)) &&
+        (isInRange2WithDouble(posX, posY, centerX - sqrt(3) / 2 * towerLength, centerY - 0.5 * towerLength, range))) {
         return true;
     }
     
     return false;
 }
 
-bool TowerHexagonAOI::isPartialCoveredTower(position_t posX, position_t posY, position_t range, position_t centerX, position_t centerY) {
+bool TowerHexagonAOI::isPartialCoveredTower(position_t posX, position_t posY, position_t range, double centerX, double centerY) {
     // angel in circle
-    if ((isInRange2(posX, posY, centerX, centerY - towerLength, range)) ||
-        (isInRange2(posX, posY, centerX + sqrt(3) / 2 * towerLength, centerY - 0.5 * towerLength, range)) ||
-        (isInRange2(posX, posY, centerX + sqrt(3) / 2 * towerLength, centerY + 0.5 * towerLength, range)) ||
-        (isInRange2(posX, posY, centerX, centerY + towerLength, range)) ||
-        (isInRange2(posX, posY, centerX - sqrt(3) / 2 * towerLength, centerY + 0.5 * towerLength, range)) ||
-        (isInRange2(posX, posY, centerX - sqrt(3) / 2 * towerLength, centerY - 0.5 * towerLength, range))) {
+    if ((isInRange2WithDouble(posX, posY, centerX, centerY - towerLength, range)) ||
+        (isInRange2WithDouble(posX, posY, centerX + sqrt(3) / 2 * towerLength, centerY - 0.5 * towerLength, range)) ||
+        (isInRange2WithDouble(posX, posY, centerX + sqrt(3) / 2 * towerLength, centerY + 0.5 * towerLength, range)) ||
+        (isInRange2WithDouble(posX, posY, centerX, centerY + towerLength, range)) ||
+        (isInRange2WithDouble(posX, posY, centerX - sqrt(3) / 2 * towerLength, centerY + 0.5 * towerLength, range)) ||
+        (isInRange2WithDouble(posX, posY, centerX - sqrt(3) / 2 * towerLength, centerY - 0.5 * towerLength, range))) {
         return true;
     }
     
@@ -316,17 +343,17 @@ bool TowerHexagonAOI::isPartialCoveredTower(position_t posX, position_t posY, po
     return false;
 }
 
-bool TowerHexagonAOI::isCoveredBySide(position_t posX, position_t posY, position_t range, position_t pos1X, position_t pos1Y, position_t pos2X, position_t pos2Y) {
+bool TowerHexagonAOI::isCoveredBySide(position_t posX, position_t posY, position_t range, double pos1X, double pos1Y, double pos2X, double pos2Y) {
         
     if (pos1X != pos2X) {
         double k = (pos1Y - pos2Y) * 1.0 / (pos1X - pos2X);
         double x = (k * posY + posX - k * pos1Y + k * k * pos1X) * 1.0 / (k * k + 1);
         double y = (pos1Y - k * pos1X + k * posX + k * k * posY) / (k * k + 1);
-        if (isInRange2(posX, posY, x, y, range)) {
+        if (isInRange2WithDouble(posX, posY, x, y, range)) {
             return true;
         }
     } else {
-        if (isInRange(posX, pos1X, range)) {
+        if (isInRangeWithDouble(posX, pos1X, range)) {
             return true;
         }
     }
@@ -335,7 +362,7 @@ bool TowerHexagonAOI::isCoveredBySide(position_t posX, position_t posY, position
 }
 
 bool TowerHexagonAOI::classifyTower(position_t posX, position_t posY, position_t range, int i, int j, list<Tower*> &fullCoveredTowers, list<Tower*> &partialCoveredTowers) {
-    position_t centerX, centerY;
+    double centerX, centerY;
     getCenterByTowerPos(i, j, centerX, centerY);
     
     if (isFullCoveredTower(posX, posY, range, centerX, centerY)) {
@@ -432,11 +459,11 @@ void TowerHexagonAOI::getTowerPosByXY(position_t posX, position_t posY, position
     }
 }
 
-position_t TowerHexagonAOI::getDistance(position_t posX, position_t posY, position_t anotherPosX, position_t anotherPosY) {
+double TowerHexagonAOI::getDistance(double posX, double posY, double anotherPosX, double anotherPosY) {
     return (posX - anotherPosX) * (posX - anotherPosX) + (posY - anotherPosY) * (posY - anotherPosY);
 }
 
-void TowerHexagonAOI::getCenterByTowerPos(position_t i, position_t j, position_t &centerX, position_t &centerY) {
+void TowerHexagonAOI::getCenterByTowerPos(position_t i, position_t j, double &centerX, double &centerY) {
     centerY = 0.5 * towerLength + 1.5 * towerLength * j;
     if (0 == j % 2) {
         centerX = sqrt(3) / 2 * towerLength + sqrt(3) * towerLength * i;

@@ -40,15 +40,15 @@ private:
     map<entity_t, GameObject *> findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY);
     map<entity_t, GameObject *> findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range);
 
-    bool isFullCoveredTower(position_t posX, position_t posY, position_t range, position_t centerX, position_t centerY);
-    bool isPartialCoveredTower(position_t posX, position_t posY, position_t range, position_t centerX, position_t centerY);
-    bool isCoveredBySide(position_t posX, position_t posY, position_t range, position_t pos1X, position_t pos1Y, position_t pos2X, position_t pos2Y);
+    bool isFullCoveredTower(position_t posX, position_t posY, position_t range, double centerX, double centerY);
+    bool isPartialCoveredTower(position_t posX, position_t posY, position_t range, double centerX, double centerY);
+    bool isCoveredBySide(position_t posX, position_t posY, position_t range, double pos1X, double pos1Y, double pos2X, double pos2Y);
     
     bool classifyTower(position_t posX, position_t posY, position_t range, int i, int j, list<Tower*> &fullCoveredTowers, list<Tower*> &partialCoveredTowers);
     
     void getTowerPosByXY(position_t posX, position_t posY, position_t &i, position_t &j);
-    position_t getDistance(position_t posX, position_t posY, position_t anotherPosX, position_t anotherPosY);
-    void getCenterByTowerPos(position_t i, position_t j, position_t &centerX, position_t &centerY);
+    double getDistance(double posX, double posY, double anotherPosX, double anotherPosY);
+    void getCenterByTowerPos(position_t i, position_t j, double &centerX, double &centerY);
 };
 
 #endif /* TowerHexagonAOI_hpp */
