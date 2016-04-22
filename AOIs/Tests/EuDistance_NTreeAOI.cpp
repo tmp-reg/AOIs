@@ -1,23 +1,25 @@
 //
-//  EuDistance_TowerHexagonAOI.cpp
+//  EuDistance_NTreeAOI.cpp
 //  AOIs
 //
-//  Created by zklgame on 4/19/16.
+//  Created by zklgame on 4/21/16.
 //  Copyright © 2016 Zhejiang University. All rights reserved.
 //
 
 #include "../GameBasics/GameWorld.hpp"
 #include "../AOIServices/EuDistanceAOIService.hpp"
-#include "../AOIServices/TowerHexagonAOIService.hpp"
+#include "../AOIServices/NTreeAOIService.hpp"
 
 #include <iostream>
 #include <vector>
 
-int main4() {
+using namespace std;
+
+int main() {
     // create object data
     entity_t objectNum = 10000;
     entity_t movedNum = 5000;
-    entity_t leaveNum = 2000;
+    entity_t leaveNum = 10000;
     
     vector<GameObject *> gameObjects, gameObjectsCopy2;
     vector<GameObject *> MovedgameObjects1, MovedgameObjects2;
@@ -45,6 +47,11 @@ int main4() {
     srand((int)time(0));
     for (int i = 0; i < movedNum; i ++) {
         id = rand() % objectNum;
+        
+//        if (gameObjectsCopy2[id] -> type != SUBSCRIBER) {
+//            continue;
+//        }
+        
         MovedgameObjects1.push_back(gameObjects[id]);
         MovedgameObjects2.push_back(gameObjectsCopy2[id]);
         movedPosX.push_back(rand() % 500);
@@ -52,16 +59,20 @@ int main4() {
     }
     
     srand((int)time(0));
+    map<entity_t, entity_t> tmp;
     for (int i = 0; i < leaveNum; i ++) {
         id = rand() % objectNum;
-        leavedObjects1.push_back(gameObjects[id]);
-        leavedObjects2.push_back(gameObjectsCopy2[id]);
+        if (tmp.find(id) == tmp.end()) {
+            tmp[id] = id;
+            leavedObjects1.push_back(gameObjects[id]);
+            leavedObjects2.push_back(gameObjectsCopy2[id]);
+        }
     }
     
     GameWorld *world1 = new GameWorld();
     world1 -> aoi = new EuDistanceAOIService();
     GameWorld * world2 = new GameWorld();
-    world2 -> aoi = new TowerHexagonAOIService(10000, 10000, 100);
+    world2 -> aoi = new NTreeAOIService(10000, 10000, 100, 5);
     
     //////////////////////
     // test addObject
@@ -71,6 +82,7 @@ int main4() {
         world1 -> addObject(*iter);
     }
     for (iter = gameObjectsCopy2 . begin(); iter != gameObjectsCopy2 . end(); iter ++) {
+        //cout << (*iter) -> id << " " << (*iter) -> posX << " " << (*iter) -> posY << " " << uint16_t((*iter) -> type) << endl;
         world2 -> addObject(*iter);
     }
     
@@ -83,6 +95,7 @@ int main4() {
             
         } else {
             cout << "isAddRight : FALSE!!! at " << i << endl << endl;
+            
             isAddRight = false;
             return 1;
         }
@@ -91,6 +104,7 @@ int main4() {
     cout << "??????????????????????????????????" << endl;
     cout << "ADD OBJECT PASS" << endl;
     cout << "??????????????????????????????????" << endl << endl;
+    
     
     //////////////////////
     // test moveObject
@@ -141,6 +155,38 @@ int main4() {
         } else {
             cout << "isRemoveRight : FALSE!!! at " << i << endl << endl;
             isRemoveRight = false;
+            
+            
+            //test code
+            cout << gameObjects[i] -> id << " | " << uint16_t(gameObjects[i] -> type) << " | " << gameObjects[i] -> posX << " | " << gameObjects[i] -> posY << " | " << gameObjects[i] -> range << " | " << gameObjects[i] -> messageNum << " | " << gameObjects[i] -> addMessageNum << " | " << gameObjects[i] -> moveMessageNum << " | " << gameObjects[i] -> leaveMessageNum << endl;
+            
+            cout << i << " | " << uint16_t(gameObjectsCopy2[i] -> type) << " | " << gameObjectsCopy2[i] -> posX << " | " << gameObjectsCopy2[i] -> posY << " | " << gameObjectsCopy2[i] -> range << " | " << gameObjectsCopy2[i] -> messageNum << " | " << gameObjectsCopy2[i] -> addMessageNum << " | " << gameObjectsCopy2[i] -> moveMessageNum << " | " << gameObjectsCopy2[i] -> leaveMessageNum << endl;
+            
+            map<entity_t, entity_t>::iterator listIter;
+            cout << "more: " << endl;
+            for (listIter = gameObjectsCopy2[i] -> removeMessageDetail . begin(); listIter != gameObjectsCopy2[i] -> removeMessageDetail . end(); listIter ++) {
+                if (gameObjects[i] -> removeMessageDetail . find(listIter -> first) == gameObjects[i] -> removeMessageDetail . end()) {
+                    cout << listIter -> first << " | " << uint16_t(gameObjectsCopy2[listIter -> first] -> type) << " | " << gameObjectsCopy2[listIter -> first] -> posX << " | " << gameObjectsCopy2[listIter -> first] -> posY << endl;
+                }
+            }
+            
+            cout << "less: " << endl;
+            for (listIter = gameObjects[i] -> removeMessageDetail . begin(); listIter != gameObjects[i] -> removeMessageDetail . end(); listIter ++) {
+                if (gameObjectsCopy2[i] -> removeMessageDetail . find(listIter -> first) == gameObjectsCopy2[i] -> removeMessageDetail . end()) {
+                    cout << listIter -> first << " | " << uint16_t(gameObjectsCopy2[listIter -> first] -> type) << " | " << gameObjectsCopy2[listIter -> first] -> posX << " | " << gameObjectsCopy2[listIter -> first] -> posY << endl;
+                    
+                    NTree *t1 = gameObjectsCopy2[i] -> tree;
+                    NTree *t2 = gameObjectsCopy2[listIter -> first] -> tree;
+                    
+                    cout << t1 << endl;
+                    cout << t2 << endl;
+                    
+                    
+                    
+                }
+            }
+            
+            
             return 1;
         }
     }
@@ -155,4 +201,6 @@ int main4() {
     delete world2;
     
     return 0;
+
+
 }

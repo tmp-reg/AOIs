@@ -18,6 +18,8 @@ using namespace std;
 
 class GameWorld;
 
+class NTree;
+
 class GameObject {
     
 public:
@@ -46,7 +48,9 @@ public:
     entity_t addMessageNum;
     entity_t leaveMessageNum;
     entity_t moveMessageNum;
-    map<entity_t, entity_t> addMessageDetail;
+    map<entity_t, entity_t> addMessageDetail, removeMessageDetail;
+    
+    NTree *tree;
     
     // for test
     //vector<entity_t> addMessageDetail, removeMessageDetail;

@@ -292,14 +292,6 @@ bool TowerAOI::isPartialCoveredTower(position_t posX, position_t posY, position_
         return true;
     }
     
-    
-    if ((isInRange(posX, pos1X, range)) ||
-        (isInRange(posX, pos2X, range)) ||
-        (isInRange(posY, pos1Y, range)) ||
-        (isInRange(posY, pos2Y, range))) {
-        return true;
-    }
-    
     return false;
 }
 

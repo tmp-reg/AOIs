@@ -14,6 +14,7 @@
 using namespace std;
 
 GameObject::GameObject(entity_t id, type_t type, position_t posX, position_t posY, position_t range): id(id), type(type), posX(posX), posY(posY), range(range), messageNum(0), addMessageNum(0), leaveMessageNum(0), moveMessageNum(0){
+    this -> tree = NULL;
     //cout << "Create  !!! GameObject id: " << id << ", type: " << uint16_t(type) << ", posX: " << posX << ", posY: " << posY << ", range: " << range << endl;
 }
 
@@ -33,6 +34,7 @@ void GameObject::receiveMessagesFromPublisher(GameObject *publisher, state_t sta
         addMessageDetail[publisher -> id] = publisher -> id;
     } else if (REMOVE_MESSAGE == state) {
         leaveMessageNum ++;
+        removeMessageDetail[publisher -> id] = publisher -> id;
     } else if (MOVE_MESSAGE == state) {
         moveMessageNum ++;
     }
@@ -48,7 +50,11 @@ void GameObject::receiveMessagesFromPublishers(list<GameObject *> publishers, st
     list<GameObject *>::iterator iter;
     for (iter = publishers . begin(); iter != publishers . end(); iter ++) {
         //cout << (uint16_t)state << " : " << this -> id << " receives from " << (*iter) -> id << endl;
-        addMessageDetail[(*iter) -> id] = (*iter) -> id;
+        if (ADD_MESSAGE == state) {
+            addMessageDetail[(*iter) -> id] = (*iter) -> id;
+        } else if (REMOVE_MESSAGE == state) {
+            removeMessageDetail[(*iter) -> id] = (*iter) -> id;
+        }
     }
     
     if (ADD_MESSAGE == state) {

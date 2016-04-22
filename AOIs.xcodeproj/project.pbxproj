@@ -13,6 +13,8 @@
 		6E2107621CB5FE240040F2DC /* BaseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107601CB5FE240040F2DC /* BaseTest.cpp */; };
 		6E2107651CB657BF0040F2DC /* XYListAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107631CB657BF0040F2DC /* XYListAOIService.cpp */; };
 		6E2107A21CB742CE0040F2DC /* EuDistance_XYList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2107A11CB742CE0040F2DC /* EuDistance_XYList.cpp */; };
+		6E398E2D1CC8DFCD0079021A /* NTreeAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E398E2B1CC8DFCD0079021A /* NTreeAOIService.cpp */; };
+		6E398E2F1CC8E0950079021A /* EuDistance_NTreeAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E398E2E1CC8E0950079021A /* EuDistance_NTreeAOI.cpp */; };
 		6E5C7D4D1CC5C86E00024872 /* EuDistance_TowerHexagonAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C7D4C1CC5C86E00024872 /* EuDistance_TowerHexagonAOI.cpp */; };
 		6E8BCBBD1CC0830600459D90 /* TowerHexagonAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8BCBBB1CC0830600459D90 /* TowerHexagonAOI.cpp */; };
 		6E984D691CC48B4700291009 /* TowerHexagonAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E984D671CC48B4700291009 /* TowerHexagonAOIService.cpp */; };
@@ -30,6 +32,7 @@
 		6ED9AB511CBC9EF600380DE8 /* XYOrthogonalListAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9AB4F1CBC9EF600380DE8 /* XYOrthogonalListAOI.cpp */; };
 		6EDB9FB81CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EDB9FB71CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp */; };
 		6EDB9FBB1CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EDB9FB91CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp */; };
+		6EEBB2E01CC60DDA0075F8D4 /* NTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBB2DE1CC60DDA0075F8D4 /* NTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +59,9 @@
 		6E2107631CB657BF0040F2DC /* XYListAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYListAOIService.cpp; sourceTree = "<group>"; };
 		6E2107641CB657BF0040F2DC /* XYListAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XYListAOIService.hpp; sourceTree = "<group>"; };
 		6E2107A11CB742CE0040F2DC /* EuDistance_XYList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistance_XYList.cpp; sourceTree = "<group>"; };
+		6E398E2B1CC8DFCD0079021A /* NTreeAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NTreeAOIService.cpp; sourceTree = "<group>"; };
+		6E398E2C1CC8DFCD0079021A /* NTreeAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NTreeAOIService.hpp; sourceTree = "<group>"; };
+		6E398E2E1CC8E0950079021A /* EuDistance_NTreeAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistance_NTreeAOI.cpp; sourceTree = "<group>"; };
 		6E5C7D4C1CC5C86E00024872 /* EuDistance_TowerHexagonAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistance_TowerHexagonAOI.cpp; sourceTree = "<group>"; };
 		6E8BCBBB1CC0830600459D90 /* TowerHexagonAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowerHexagonAOI.cpp; sourceTree = "<group>"; };
 		6E8BCBBC1CC0830600459D90 /* TowerHexagonAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TowerHexagonAOI.hpp; sourceTree = "<group>"; };
@@ -88,6 +94,8 @@
 		6EDB9FB71CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYList_XYOrthogonalList.cpp; sourceTree = "<group>"; };
 		6EDB9FB91CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYOrthogonalListAOIService.cpp; sourceTree = "<group>"; };
 		6EDB9FBA1CBDE57600D12F68 /* XYOrthogonalListAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XYOrthogonalListAOIService.hpp; sourceTree = "<group>"; };
+		6EEBB2DE1CC60DDA0075F8D4 /* NTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NTree.cpp; sourceTree = "<group>"; };
+		6EEBB2DF1CC60DDA0075F8D4 /* NTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,8 @@
 			children = (
 				6E984D6E1CC4D4A800291009 /* NTreeAOI.hpp */,
 				6E984D6D1CC4D4A800291009 /* NTreeAOI.cpp */,
+				6EEBB2DF1CC60DDA0075F8D4 /* NTree.hpp */,
+				6EEBB2DE1CC60DDA0075F8D4 /* NTree.cpp */,
 			);
 			path = NTreeAOI;
 			sourceTree = "<group>";
@@ -231,6 +241,7 @@
 				6EDB9FB71CBDE53300D12F68 /* XYList_XYOrthogonalList.cpp */,
 				6ED2A01A1CBF445C00666687 /* EuDistance_TowerAOI.cpp */,
 				6E5C7D4C1CC5C86E00024872 /* EuDistance_TowerHexagonAOI.cpp */,
+				6E398E2E1CC8E0950079021A /* EuDistance_NTreeAOI.cpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -250,6 +261,8 @@
 				6ED2A0171CBF438600666687 /* TowerAOIService.cpp */,
 				6E984D681CC48B4700291009 /* TowerHexagonAOIService.hpp */,
 				6E984D671CC48B4700291009 /* TowerHexagonAOIService.cpp */,
+				6E398E2C1CC8DFCD0079021A /* NTreeAOIService.hpp */,
+				6E398E2B1CC8DFCD0079021A /* NTreeAOIService.cpp */,
 			);
 			path = AOIServices;
 			sourceTree = "<group>";
@@ -313,6 +326,7 @@
 				6E2107651CB657BF0040F2DC /* XYListAOIService.cpp in Sources */,
 				6EDB9FBB1CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp in Sources */,
 				6EB8D7EC1CB4A4C400EE30DE /* GameWorld.cpp in Sources */,
+				6E398E2F1CC8E0950079021A /* EuDistance_NTreeAOI.cpp in Sources */,
 				6ED4327B1CB3A3A600115051 /* AOIService.cpp in Sources */,
 				6E8BCBBD1CC0830600459D90 /* TowerHexagonAOI.cpp in Sources */,
 				6E5C7D4D1CC5C86E00024872 /* EuDistance_TowerHexagonAOI.cpp in Sources */,
@@ -323,6 +337,7 @@
 				6E21074C1CB5F1EC0040F2DC /* BaseAOI.cpp in Sources */,
 				6EB8D7F11CB50DFA00EE30DE /* XYListAOI.cpp in Sources */,
 				6E2107621CB5FE240040F2DC /* BaseTest.cpp in Sources */,
+				6EEBB2E01CC60DDA0075F8D4 /* NTree.cpp in Sources */,
 				6ED2A0191CBF438600666687 /* TowerAOIService.cpp in Sources */,
 				6E984D691CC48B4700291009 /* TowerHexagonAOIService.cpp in Sources */,
 				6E984D6F1CC4D4A800291009 /* NTreeAOI.cpp in Sources */,
@@ -333,6 +348,7 @@
 				6ED9AB511CBC9EF600380DE8 /* XYOrthogonalListAOI.cpp in Sources */,
 				6ED432781CB3971900115051 /* EuDistanceAOIService.cpp in Sources */,
 				6EB8D7EB1CB4A4C400EE30DE /* GameObject.cpp in Sources */,
+				6E398E2D1CC8DFCD0079021A /* NTreeAOIService.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
