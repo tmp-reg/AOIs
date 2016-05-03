@@ -48,9 +48,7 @@ bool TowerHexagonAOI::addPublisher(GameObject *obj) {
 }
 
 bool TowerHexagonAOI::addSubscriber(GameObject *obj) {
-    position_t towerPosX, towerPosY;
-    getTowerPosByXY(obj -> posX, obj -> posY, towerPosX, towerPosY);
-    this -> towers[towerPosX][towerPosY] -> addSubscriber(obj);
+    this -> subscribers[obj -> id] = obj;
     
     this -> findPublishersInRange(obj, ADD_MESSAGE);
     
@@ -70,9 +68,7 @@ bool TowerHexagonAOI::removePublisher(GameObject *obj) {
 bool TowerHexagonAOI::removeSubscriber(GameObject *obj) {
     this -> findPublishersInRange(obj, REMOVE_MESSAGE);
     
-    position_t towerPosX, towerPosY;
-    getTowerPosByXY(obj -> posX, obj -> posY, towerPosX, towerPosY);
-    this -> towers[towerPosX][towerPosY] -> removeSubscriber(obj);
+    this -> subscribers . erase(obj -> id);
     
     return true;
 }
@@ -88,8 +84,8 @@ bool TowerHexagonAOI::onPublisherMove(GameObject *obj, position_t oldPosX, posit
     }
     
     map<entity_t, GameObject *> oldSubMaps, newSubMaps;
-    oldSubMaps = this -> findSubscribersInTheirRange(obj -> id, oldPosX, oldPosY);
-    newSubMaps = this -> findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
+    oldSubMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, oldPosX, oldPosY);
+    newSubMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
     
     list<GameObject *> addSet, moveSet, removeSet;
     map<entity_t, GameObject *> :: iterator iter;
@@ -119,15 +115,6 @@ bool TowerHexagonAOI::onSubscriberMove(GameObject *obj, position_t oldPosX, posi
     
     oldPubMaps = this -> findPublishersInRange(obj -> id, oldPosX, oldPosY, obj -> range);
     
-    position_t oldTowerPosX, oldTowerPosY, towerPosX, towerPosY;
-    if (oldPosX != obj -> posX || oldPosY != obj -> posY) {
-        getTowerPosByXY(oldPosX, oldPosY, oldTowerPosX, oldTowerPosY);
-        getTowerPosByXY(obj -> posX, obj -> posY, towerPosX, towerPosY);
-        
-        this -> towers[oldTowerPosX][oldTowerPosY] -> removeSubscriber(obj);
-        this -> towers[towerPosX][towerPosY] -> addSubscriber(obj);
-    }
-    
     newPubMaps = this -> findPublishersInRange(obj -> id, obj -> posX, obj -> posY, obj -> range);
     
     list<GameObject *> addSet, moveSet, removeSet;
@@ -154,7 +141,7 @@ bool TowerHexagonAOI::onSubscriberMove(GameObject *obj, position_t oldPosX, posi
 }
 
 void TowerHexagonAOI::findSubscribersInTheirRange(GameObject *obj, state_t state) {
-    map<entity_t, GameObject *> subMaps = this -> findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
+    map<entity_t, GameObject *> subMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
     list<GameObject *> subs = transMapsToLists(subMaps);
     
     if (ADD_MESSAGE == state) {
@@ -173,27 +160,6 @@ void TowerHexagonAOI::findPublishersInRange(GameObject *obj, state_t state) {
     } else if (REMOVE_MESSAGE == state) {
         this -> aoiEventManager -> onRemoveSubscriber(obj, pubs);
     }
-}
-
-map<entity_t, GameObject *> TowerHexagonAOI::findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY) {
-    map<entity_t, GameObject *> subs;
-    map<entity_t, GameObject *> towerSubs;
-    map<entity_t, GameObject *>::iterator iter;
-    
-    for (position_t i = 0; i < this -> towerX; i ++) {
-        for (position_t j = 0; j < this -> towerY; j ++) {
-            towerSubs = this -> towers[i][j] -> getSubscribers();
-            for (iter = towerSubs.begin(); iter != towerSubs.end(); iter ++) {
-                if (isInRange2(posX, posY, iter -> second -> posX, iter -> second -> posY, iter -> second -> range)) {
-                    subs[iter -> first] = iter -> second;
-                }
-            }
-        }
-    }
-    
-    subs.erase(objId);
-    
-    return subs;
 }
 
 map<entity_t, GameObject *> TowerHexagonAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range) {

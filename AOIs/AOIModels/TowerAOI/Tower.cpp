@@ -13,23 +13,9 @@ bool Tower::addPublisher(GameObject *obj) {
     return true;
 }
 
-bool Tower::addSubscriber(GameObject *obj) {
-    this -> subscribers[obj -> id] = obj;
-    return true;
-}
-
 bool Tower::removePublisher(GameObject *obj) {
     this -> publishers . erase(obj -> id);
     return true;
-}
-
-bool Tower::removeSubscriber(GameObject *obj) {
-    this -> subscribers . erase(obj -> id);
-    return true;
-}
-
-map<entity_t, GameObject *> Tower::getSubscribers() {
-    return this -> subscribers;
 }
 
 map<entity_t, GameObject *> Tower::getPublishers() {

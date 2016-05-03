@@ -1,5 +1,5 @@
 //
-//  EuDistanceAOITest.cpp
+//  TowerHexagonAOITest.cpp
 //  AOIs
 //
 //  Created by zklgame on 5/3/16.
@@ -7,15 +7,14 @@
 //
 
 #include "BasePerformanceTest.hpp"
-#include "../../AOIServices/EuDistanceAOIService.hpp"
+#include "../../AOIServices/TowerHexagonAOIService.hpp"
 
-int main11() {
+int main15() {
     
     int i = 4;
-    
     cout << "Test " << i + 1 << " :" << endl;
     BasePerformanceTest *test = new BasePerformanceTest();
-    test -> world -> aoi = new EuDistanceAOIService();
+    test -> world -> aoi = new TowerHexagonAOIService(test -> world -> width, test -> world -> length, 100);
     test -> test(i + 1);
     delete test -> world -> aoi;
     delete test;

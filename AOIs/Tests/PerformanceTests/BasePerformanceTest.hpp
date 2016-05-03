@@ -44,6 +44,8 @@ private:
     
     void initGame(int i);
     void deInitGame();
+    
+    void realTest(int i);
 };
 
 

@@ -24,6 +24,8 @@ public:
     virtual bool onObjectMove(GameObject *obj, position_t oldPosX, position_t oldPosY);
     
 protected:
+    map<entity_t, GameObject *> subscribers;
+
     AOIEventManager *aoiEventManager;
     
     virtual bool addPublisher(GameObject *obj) = 0;
@@ -40,7 +42,21 @@ protected:
     virtual void findPublishersInRange(GameObject *obj, state_t state) = 0;
     
     // MOVE: find by position
-    virtual map<entity_t, GameObject *> findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY) = 0;
+    map<entity_t, GameObject *> findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY) {
+        map<entity_t, GameObject *> subs;
+        map<entity_t, GameObject *>::iterator iter;
+        
+        for (iter = this -> subscribers . begin(); iter != this -> subscribers . end(); iter ++) {
+            if (isInRange2(posX, posY, iter -> second -> posX, iter -> second -> posY, iter -> second -> range)) {
+                subs[iter -> first] = iter -> second;
+            }
+        }
+        
+        subs.erase(objId);
+        
+        return subs;
+    };
+    
     virtual map<entity_t, GameObject *> findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range) = 0;
     
     inline virtual bool isInRange2(position_t posX, position_t posY, position_t otherPosX, position_t otherPosY, position_t range) {

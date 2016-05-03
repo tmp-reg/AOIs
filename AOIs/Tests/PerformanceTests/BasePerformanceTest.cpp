@@ -22,9 +22,7 @@ BasePerformanceTest::~BasePerformanceTest() {
 void BasePerformanceTest::test(int i) {
     initGame(i);
     
-    testAdd(i);
-    testMove(i);
-    testLeave(i);
+    realTest(i);
     
     deInitGame();
 }
@@ -144,4 +142,10 @@ void BasePerformanceTest::deInitGame() {
     for (int i = 0; i < objectNum; i ++) {
         delete gameObjects[i];
     }
+}
+
+void BasePerformanceTest::realTest(int i) {
+    testAdd(i);
+    testMove(i);
+    testLeave(i);
 }

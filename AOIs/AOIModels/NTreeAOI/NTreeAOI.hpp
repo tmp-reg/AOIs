@@ -37,7 +37,6 @@ private:
     void findPublishersInRange(GameObject *obj, state_t state);
 
     // MOVE: find by position
-    map<entity_t, GameObject *> findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY);
     map<entity_t, GameObject *> findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range);
     
 };

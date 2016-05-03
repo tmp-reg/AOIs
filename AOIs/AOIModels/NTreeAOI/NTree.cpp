@@ -92,11 +92,6 @@ bool NTree::addPublisher(GameObject *obj) {
     return true;
 }
 
-bool NTree::addSubscriber(GameObject *obj) {
-    this -> subscribers[obj -> id] = obj;
-    return true;
-}
-
 bool NTree::removePublisher(GameObject *obj) {
         
     if (this -> isSplit) {
@@ -169,11 +164,6 @@ bool NTree::removePublisherByPos(entity_t objId, position_t posX, position_t pos
     }
 }
 
-bool NTree::removeSubscriber(GameObject *obj) {
-    this -> subscribers . erase(obj -> id);
-    return true;
-}
-
 entity_t NTree::getPublisherNum() {
     if (!isSplit) {
         return (entity_t)(this -> publishers . size());
@@ -235,10 +225,6 @@ void NTree::classifyTree(position_t posX, position_t posY, position_t range, lis
             }
         }
     }
-}
-
-map<entity_t, GameObject *> NTree::getAllSubscribers() {
-    return this -> subscribers;
 }
 
 map<entity_t, GameObject *> NTree::findPublishersInRange(position_t posX, position_t posY, position_t range) {

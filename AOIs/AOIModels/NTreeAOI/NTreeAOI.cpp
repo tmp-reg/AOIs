@@ -25,7 +25,7 @@ bool NTreeAOI::addPublisher(GameObject *obj) {
 }
 
 bool NTreeAOI::addSubscriber(GameObject *obj) {
-    this -> tree -> addSubscriber(obj);
+    this -> subscribers[obj -> id] = obj;
     
     this -> findPublishersInRange(obj, ADD_MESSAGE);
     
@@ -33,8 +33,6 @@ bool NTreeAOI::addSubscriber(GameObject *obj) {
 }
 
 bool NTreeAOI::removePublisher(GameObject *obj) {
-    
-    this -> tree -> tt();
     
     this -> findSubscribersInTheirRange(obj, REMOVE_MESSAGE);
     
@@ -45,11 +43,9 @@ bool NTreeAOI::removePublisher(GameObject *obj) {
 
 bool NTreeAOI::removeSubscriber(GameObject *obj) {
     
-    this -> tree -> tt();
-    
     this -> findPublishersInRange(obj, REMOVE_MESSAGE);
     
-    this -> tree -> removeSubscriber(obj);
+    this -> subscribers . erase(obj -> id);
     
     return true;
 }
@@ -57,14 +53,14 @@ bool NTreeAOI::removeSubscriber(GameObject *obj) {
 bool NTreeAOI::onPublisherMove(GameObject *obj, position_t oldPosX, position_t oldPosY) {
     map<entity_t, GameObject *> oldSubMaps, newSubMaps;
     
-    oldSubMaps = this -> findSubscribersInTheirRange(obj -> id, oldPosX, oldPosY);
+    oldSubMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, oldPosX, oldPosY);
     
     if (oldPosX != obj -> posX || oldPosY != obj -> posY) {
         this -> tree -> removePublisherByPos(obj -> id, oldPosX, oldPosY);
         this -> tree -> addPublisher(obj);
     }
     
-    newSubMaps = this -> findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
+    newSubMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
     
     list<GameObject *> addSet, moveSet, removeSet;
     map<entity_t, GameObject *> :: iterator iter;
@@ -94,11 +90,6 @@ bool NTreeAOI::onSubscriberMove(GameObject *obj, position_t oldPosX, position_t 
 
     oldPubMaps = this -> findPublishersInRange(obj -> id, oldPosX, oldPosY, obj -> range);
     
-//    if (oldPosX != obj -> posX || oldPosY != obj -> posY) {
-//        this -> tree -> removeSubscriber(obj);
-//        this -> tree -> addSubscriber(obj);
-//    }
-    
     newPubMaps = this -> findPublishersInRange(obj -> id, obj -> posX, obj -> posY, obj -> range);
     
     list<GameObject *> addSet, moveSet, removeSet;
@@ -125,7 +116,7 @@ bool NTreeAOI::onSubscriberMove(GameObject *obj, position_t oldPosX, position_t 
 }
 
 void NTreeAOI::findSubscribersInTheirRange(GameObject *obj, state_t state) {
-    map<entity_t, GameObject *> subMaps = this -> findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
+    map<entity_t, GameObject *> subMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
     list<GameObject *> subs = transMapsToLists(subMaps);
     
     if (ADD_MESSAGE == state) {
@@ -144,23 +135,6 @@ void NTreeAOI::findPublishersInRange(GameObject *obj, state_t state) {
     } else if (REMOVE_MESSAGE == state) {
         this -> aoiEventManager -> onRemoveSubscriber(obj, pubs);
     }
-}
-
-map<entity_t, GameObject *> NTreeAOI::findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY) {
-    map<entity_t, GameObject *> subs, allSubs;
-    map<entity_t, GameObject *>::iterator iter;
-    
-    allSubs = this -> tree -> getAllSubscribers();
-    
-    for (iter = allSubs.begin(); iter != allSubs.end(); iter ++) {
-        if (isInRange2(posX, posY, iter -> second -> posX, iter -> second -> posY, iter -> second -> range)) {
-            subs[iter -> first] = iter -> second;
-        }
-    }
-    
-    subs.erase(objId);
-    
-    return subs;
 }
 
 map<entity_t, GameObject *> NTreeAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range) {

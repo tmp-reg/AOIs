@@ -35,6 +35,8 @@ bool XYOrthogonalListAOI::addSubscriber(GameObject *obj) {
         this -> addObjectInList(obj, LISTY);
     }
     
+    this -> subscribers[obj -> id] = obj;
+    
     this -> findPublishersInRange(obj, ADD_MESSAGE);
     
     return true;
@@ -52,6 +54,8 @@ bool XYOrthogonalListAOI::removePublisher(GameObject *obj) {
 
 bool XYOrthogonalListAOI::removeSubscriber(GameObject *obj) {
     this -> findPublishersInRange(obj, REMOVE_MESSAGE);
+    
+    this -> subscribers . erase(obj -> id);
     
     this -> removeObjectInList(obj, LISTX);
     this -> removeObjectInList(obj, LISTY);
@@ -73,8 +77,8 @@ bool XYOrthogonalListAOI::onPublisherMove(GameObject *obj, position_t oldPosX, p
     }
     
     map<entity_t, GameObject *> oldSubMaps, newSubMaps;
-    oldSubMaps = this -> findSubscribersInTheirRange(obj -> id, oldPosX, oldPosY);
-    newSubMaps = this -> findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
+    oldSubMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, oldPosX, oldPosY);
+    newSubMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
     
     list<GameObject *> addSet, moveSet, removeSet;
     map<entity_t, GameObject *> :: iterator iter;
@@ -213,7 +217,7 @@ bool XYOrthogonalListAOI::removeObjectInList(GameObject *obj, state_t listStyle)
 }
 
 void XYOrthogonalListAOI::findSubscribersInTheirRange(GameObject *obj, state_t state) {
-    map<entity_t, GameObject *> subMaps = this -> findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
+    map<entity_t, GameObject *> subMaps = this -> BaseAOI::findSubscribersInTheirRange(obj -> id, obj -> posX, obj -> posY);
     list<GameObject *> subs = transMapsToLists(subMaps);
     
     if (ADD_MESSAGE == state) {
@@ -234,25 +238,6 @@ void XYOrthogonalListAOI::findPublishersInRange(GameObject *obj, state_t state) 
     } else if (REMOVE_MESSAGE == state) {
         this -> aoiEventManager -> onRemoveSubscriber(obj, pubs);
     }
-}
-
-map<entity_t, GameObject *> XYOrthogonalListAOI::findSubscribersInTheirRange(entity_t objId, position_t posX, position_t posY) {
-    map<entity_t, GameObject *> subs;
-    list<GameObject::Node *>::iterator iter;
-    list<GameObject *>::iterator subIter;
-    
-    for (iter = this -> listX . begin(); iter != this -> listX . end(); iter ++) {
-        for (subIter = (*iter) -> objList . begin(); subIter != (*iter) -> objList . end(); subIter ++) {
-            if ((*subIter) -> type == PUBLISHER || (*subIter) -> id == objId) {
-                continue;
-            }
-            if (isInRange2(posX, posY, (*subIter) -> posX, (*subIter) -> posY, (*subIter) -> range)) {
-                subs[(*subIter) -> id] = (*subIter);
-            }
-        }
-    }
-    
-    return subs;
 }
 
 map<entity_t, GameObject *> XYOrthogonalListAOI::findPublishersInRange(entity_t objId, position_t posX, position_t posY, position_t range, list<GameObject::Node *>::iterator listNodePosX, list<GameObject::Node *>::iterator listNodePosY, list<GameObject *>::iterator listSubPosX, list<GameObject *>::iterator listSubPosY) {
@@ -349,6 +334,7 @@ map<entity_t, GameObject *> XYOrthogonalListAOI::findPublishersInRange(entity_t 
     // rect aoi, not the circle!
     for (mapIter = pubsX.begin(); mapIter != pubsX.end(); mapIter ++) {
         if (pubsY.find(mapIter -> first) != pubsY.end()) {
+            pubsY.erase(mapIter -> first);
             pubs[mapIter -> first] = mapIter -> second;
         }
     }

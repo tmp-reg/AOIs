@@ -22,18 +22,15 @@ public:
     virtual ~NTree();
     
     bool addPublisher(GameObject *obj);
-    bool addSubscriber(GameObject *obj);
     bool removePublisher(GameObject *obj); // if the sum of all the publishers in children < 1 /2 * maxPublisherNum, merge
     bool removePublisherByPos(entity_t objId, position_t posX, position_t posY);
-    bool removeSubscriber(GameObject *obj);
     
-    map<entity_t, GameObject *> getAllSubscribers();
     map<entity_t, GameObject *> findPublishersInRange(position_t posX, position_t posY, position_t range);
 
 private:
     // subscribers are found by traversal
     // so split is just decided by the number of publishers
-    map<entity_t, GameObject *> publishers, subscribers;
+    map<entity_t, GameObject *> publishers;
 
     bool isSplit;
     entity_t maxPublisherNum;
@@ -116,46 +113,45 @@ private:
         
         return false;
     }
-
-public:
-    void pp(int n) {
-        for (int i = 0; i < n; i ++) {
-            cout << " ";
-        }
-        if (this -> parent) {
-            cout << this << " " << this -> parent << " " << minX << " " << maxX << " " << minY << " " << maxY << " "  << endl;
-        } else {
-            cout << this << " " << minX << " " << maxX << " " << minY << " " << maxY << " "  << endl;
-        }
-        map<entity_t, GameObject *>::iterator iter;
-        for (iter = this -> publishers . begin(); iter != this -> publishers . end(); iter ++) {
-            cout << iter -> first << " | " << iter -> second -> posX << " | " << iter -> second -> posY << " | " << iter -> second -> range << " " << uint16_t(iter -> second -> type) << endl;
-        }
-        if (isSplit) {
-            for (int i = 0; i < 4; i ++) {
-                children[i] -> pp(n + 1);
-            }
-        }
-    }
-    
-    void tt() {
-        if (!isSplit) {
-            map<entity_t, GameObject *> maps = this -> publishers;
-            map<entity_t, GameObject *>::iterator iter;
-            for (iter = maps.begin(); iter != maps.end(); iter ++) {
-                if (iter -> second -> posX < minX || iter -> second -> posX >= maxX || iter -> second -> posY < minY || iter -> second -> posY >= maxY) {
-                    cout << "RRRRRRRRRRRRRRRRRRRRR " << iter -> second -> id << " " << iter -> second -> posX << " " << iter -> second -> posY << endl;
-                    cout << minX << " " << maxX << " " << minY << " " << maxX << endl;
-                }
-            }
-            
-        } else {
-            for (int i = 0; i < 4; i ++) {
-                this -> children[i] -> tt();
-            }
-        }
-    }
     
 };
+
+//    void pp(int n) {
+//        for (int i = 0; i < n; i ++) {
+//            cout << " ";
+//        }
+//        if (this -> parent) {
+//            cout << this << " " << this -> parent << " " << minX << " " << maxX << " " << minY << " " << maxY << " "  << endl;
+//        } else {
+//            cout << this << " " << minX << " " << maxX << " " << minY << " " << maxY << " "  << endl;
+//        }
+//        map<entity_t, GameObject *>::iterator iter;
+//        for (iter = this -> publishers . begin(); iter != this -> publishers . end(); iter ++) {
+//            cout << iter -> first << " | " << iter -> second -> posX << " | " << iter -> second -> posY << " | " << iter -> second -> range << " " << uint16_t(iter -> second -> type) << endl;
+//        }
+//        if (isSplit) {
+//            for (int i = 0; i < 4; i ++) {
+//                children[i] -> pp(n + 1);
+//            }
+//        }
+//    }
+//
+//    void tt() {
+//        if (!isSplit) {
+//            map<entity_t, GameObject *> maps = this -> publishers;
+//            map<entity_t, GameObject *>::iterator iter;
+//            for (iter = maps.begin(); iter != maps.end(); iter ++) {
+//                if (iter -> second -> posX < minX || iter -> second -> posX >= maxX || iter -> second -> posY < minY || iter -> second -> posY >= maxY) {
+//                    cout << "RRRRRRRRRRRRRRRRRRRRR " << iter -> second -> id << " " << iter -> second -> posX << " " << iter -> second -> posY << endl;
+//                    cout << minX << " " << maxX << " " << minY << " " << maxX << endl;
+//                }
+//            }
+//
+//        } else {
+//            for (int i = 0; i < 4; i ++) {
+//                this -> children[i] -> tt();
+//            }
+//        }
+//    }
 
 #endif /* NTree_hpp */

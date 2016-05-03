@@ -18,15 +18,12 @@ public:
     virtual ~Tower() {}
     
     bool addPublisher(GameObject *obj);
-    bool addSubscriber(GameObject *obj);
     bool removePublisher(GameObject *obj);
-    bool removeSubscriber(GameObject *obj);
     
-    map<entity_t, GameObject *> getSubscribers();
     map<entity_t, GameObject *> getPublishers();
     
 private:
-    map<entity_t, GameObject *> publishers, subscribers;
+    map<entity_t, GameObject *> publishers;
 };
 
 
