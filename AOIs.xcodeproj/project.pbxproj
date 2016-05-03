@@ -22,6 +22,9 @@
 		6EB8D7EB1CB4A4C400EE30DE /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7E71CB4A4C400EE30DE /* GameObject.cpp */; };
 		6EB8D7EC1CB4A4C400EE30DE /* GameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7E91CB4A4C400EE30DE /* GameWorld.cpp */; };
 		6EB8D7F11CB50DFA00EE30DE /* XYListAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8D7EF1CB50DFA00EE30DE /* XYListAOI.cpp */; };
+		6EBD6BD01CD83FDE00C76764 /* EuDistanceAOITest222.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBD6BCF1CD83FDE00C76764 /* EuDistanceAOITest222.cpp */; };
+		6EBD6BD31CD84DCC00C76764 /* BasePerformanceTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBD6BD11CD84DCC00C76764 /* BasePerformanceTest.cpp */; };
+		6EBD6BD51CD850D200C76764 /* EuDistanceAOITest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBD6BD41CD850D200C76764 /* EuDistanceAOITest.cpp */; };
 		6ED2A0191CBF438600666687 /* TowerAOIService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2A0171CBF438600666687 /* TowerAOIService.cpp */; };
 		6ED2A01B1CBF445C00666687 /* EuDistance_TowerAOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2A01A1CBF445C00666687 /* EuDistance_TowerAOI.cpp */; };
 		6ED432561CB34FE400115051 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ED432551CB34FE400115051 /* main.cpp */; };
@@ -75,6 +78,25 @@
 		6EB8D7EA1CB4A4C400EE30DE /* GameWorld.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameWorld.hpp; sourceTree = "<group>"; };
 		6EB8D7EF1CB50DFA00EE30DE /* XYListAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XYListAOI.cpp; sourceTree = "<group>"; };
 		6EB8D7F01CB50DFA00EE30DE /* XYListAOI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XYListAOI.hpp; sourceTree = "<group>"; };
+		6EBD6BBC1CD83F9E00C76764 /* data_init.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_init.txt; sourceTree = "<group>"; };
+		6EBD6BBD1CD83F9E00C76764 /* data_leave.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_leave.txt; sourceTree = "<group>"; };
+		6EBD6BBE1CD83F9E00C76764 /* data_move.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_move.txt; sourceTree = "<group>"; };
+		6EBD6BC01CD83F9E00C76764 /* data_init.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_init.txt; sourceTree = "<group>"; };
+		6EBD6BC11CD83F9E00C76764 /* data_leave.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_leave.txt; sourceTree = "<group>"; };
+		6EBD6BC21CD83F9E00C76764 /* data_move.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_move.txt; sourceTree = "<group>"; };
+		6EBD6BC41CD83F9E00C76764 /* data_init.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_init.txt; sourceTree = "<group>"; };
+		6EBD6BC51CD83F9E00C76764 /* data_leave.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_leave.txt; sourceTree = "<group>"; };
+		6EBD6BC61CD83F9E00C76764 /* data_move.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_move.txt; sourceTree = "<group>"; };
+		6EBD6BC81CD83F9E00C76764 /* data_init.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_init.txt; sourceTree = "<group>"; };
+		6EBD6BC91CD83F9E00C76764 /* data_leave.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_leave.txt; sourceTree = "<group>"; };
+		6EBD6BCA1CD83F9E00C76764 /* data_move.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_move.txt; sourceTree = "<group>"; };
+		6EBD6BCC1CD83F9E00C76764 /* data_init.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_init.txt; sourceTree = "<group>"; };
+		6EBD6BCD1CD83F9E00C76764 /* data_leave.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_leave.txt; sourceTree = "<group>"; };
+		6EBD6BCE1CD83F9E00C76764 /* data_move.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_move.txt; sourceTree = "<group>"; };
+		6EBD6BCF1CD83FDE00C76764 /* EuDistanceAOITest222.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistanceAOITest222.cpp; sourceTree = "<group>"; };
+		6EBD6BD11CD84DCC00C76764 /* BasePerformanceTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasePerformanceTest.cpp; sourceTree = "<group>"; };
+		6EBD6BD21CD84DCC00C76764 /* BasePerformanceTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BasePerformanceTest.hpp; sourceTree = "<group>"; };
+		6EBD6BD41CD850D200C76764 /* EuDistanceAOITest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistanceAOITest.cpp; sourceTree = "<group>"; };
 		6ED2A0171CBF438600666687 /* TowerAOIService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowerAOIService.cpp; sourceTree = "<group>"; };
 		6ED2A0181CBF438600666687 /* TowerAOIService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TowerAOIService.hpp; sourceTree = "<group>"; };
 		6ED2A01A1CBF445C00666687 /* EuDistance_TowerAOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuDistance_TowerAOI.cpp; sourceTree = "<group>"; };
@@ -178,6 +200,79 @@
 			path = XYOrthogonalListAOI;
 			sourceTree = "<group>";
 		};
+		6EBD6BB91CD83F6C00C76764 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD6BBB1CD83F9E00C76764 /* data1 */,
+				6EBD6BBF1CD83F9E00C76764 /* data2 */,
+				6EBD6BC31CD83F9E00C76764 /* data3 */,
+				6EBD6BC71CD83F9E00C76764 /* data4 */,
+				6EBD6BCB1CD83F9E00C76764 /* data5 */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
+		6EBD6BBA1CD83F7400C76764 /* PerformanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD6BCF1CD83FDE00C76764 /* EuDistanceAOITest222.cpp */,
+				6EBD6BD21CD84DCC00C76764 /* BasePerformanceTest.hpp */,
+				6EBD6BD11CD84DCC00C76764 /* BasePerformanceTest.cpp */,
+				6EBD6BD41CD850D200C76764 /* EuDistanceAOITest.cpp */,
+			);
+			path = PerformanceTests;
+			sourceTree = "<group>";
+		};
+		6EBD6BBB1CD83F9E00C76764 /* data1 */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD6BBC1CD83F9E00C76764 /* data_init.txt */,
+				6EBD6BBD1CD83F9E00C76764 /* data_leave.txt */,
+				6EBD6BBE1CD83F9E00C76764 /* data_move.txt */,
+			);
+			path = data1;
+			sourceTree = "<group>";
+		};
+		6EBD6BBF1CD83F9E00C76764 /* data2 */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD6BC01CD83F9E00C76764 /* data_init.txt */,
+				6EBD6BC11CD83F9E00C76764 /* data_leave.txt */,
+				6EBD6BC21CD83F9E00C76764 /* data_move.txt */,
+			);
+			path = data2;
+			sourceTree = "<group>";
+		};
+		6EBD6BC31CD83F9E00C76764 /* data3 */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD6BC41CD83F9E00C76764 /* data_init.txt */,
+				6EBD6BC51CD83F9E00C76764 /* data_leave.txt */,
+				6EBD6BC61CD83F9E00C76764 /* data_move.txt */,
+			);
+			path = data3;
+			sourceTree = "<group>";
+		};
+		6EBD6BC71CD83F9E00C76764 /* data4 */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD6BC81CD83F9E00C76764 /* data_init.txt */,
+				6EBD6BC91CD83F9E00C76764 /* data_leave.txt */,
+				6EBD6BCA1CD83F9E00C76764 /* data_move.txt */,
+			);
+			path = data4;
+			sourceTree = "<group>";
+		};
+		6EBD6BCB1CD83F9E00C76764 /* data5 */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD6BCC1CD83F9E00C76764 /* data_init.txt */,
+				6EBD6BCD1CD83F9E00C76764 /* data_leave.txt */,
+				6EBD6BCE1CD83F9E00C76764 /* data_move.txt */,
+			);
+			path = data5;
+			sourceTree = "<group>";
+		};
 		6ED432491CB34FE400115051 = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +330,8 @@
 		6ED432721CB3967800115051 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6EBD6BBA1CD83F7400C76764 /* PerformanceTests */,
+				6EBD6BB91CD83F6C00C76764 /* Datas */,
 				6E2107611CB5FE240040F2DC /* BaseTest.hpp */,
 				6E2107601CB5FE240040F2DC /* BaseTest.cpp */,
 				6E2107A11CB742CE0040F2DC /* EuDistance_XYList.cpp */,
@@ -327,6 +424,7 @@
 				6EDB9FBB1CBDE57600D12F68 /* XYOrthogonalListAOIService.cpp in Sources */,
 				6EB8D7EC1CB4A4C400EE30DE /* GameWorld.cpp in Sources */,
 				6E398E2F1CC8E0950079021A /* EuDistance_NTreeAOI.cpp in Sources */,
+				6EBD6BD01CD83FDE00C76764 /* EuDistanceAOITest222.cpp in Sources */,
 				6ED4327B1CB3A3A600115051 /* AOIService.cpp in Sources */,
 				6E8BCBBD1CC0830600459D90 /* TowerHexagonAOI.cpp in Sources */,
 				6E5C7D4D1CC5C86E00024872 /* EuDistance_TowerHexagonAOI.cpp in Sources */,
@@ -339,9 +437,11 @@
 				6E2107621CB5FE240040F2DC /* BaseTest.cpp in Sources */,
 				6EEBB2E01CC60DDA0075F8D4 /* NTree.cpp in Sources */,
 				6ED2A0191CBF438600666687 /* TowerAOIService.cpp in Sources */,
+				6EBD6BD31CD84DCC00C76764 /* BasePerformanceTest.cpp in Sources */,
 				6E984D691CC48B4700291009 /* TowerHexagonAOIService.cpp in Sources */,
 				6E984D6F1CC4D4A800291009 /* NTreeAOI.cpp in Sources */,
 				6E2107A21CB742CE0040F2DC /* EuDistance_XYList.cpp in Sources */,
+				6EBD6BD51CD850D200C76764 /* EuDistanceAOITest.cpp in Sources */,
 				6ED432711CB3902400115051 /* AOIEventManager.cpp in Sources */,
 				6ED2A01B1CBF445C00666687 /* EuDistance_TowerAOI.cpp in Sources */,
 				6E0A43ED1CBE21D000276861 /* Tower.cpp in Sources */,
