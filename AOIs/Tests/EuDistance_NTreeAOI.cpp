@@ -157,34 +157,34 @@ int main5() {
             isRemoveRight = false;
             
             
-            //test code
-            cout << gameObjects[i] -> id << " | " << uint16_t(gameObjects[i] -> type) << " | " << gameObjects[i] -> posX << " | " << gameObjects[i] -> posY << " | " << gameObjects[i] -> range << " | " << gameObjects[i] -> messageNum << " | " << gameObjects[i] -> addMessageNum << " | " << gameObjects[i] -> moveMessageNum << " | " << gameObjects[i] -> leaveMessageNum << endl;
-            
-            cout << i << " | " << uint16_t(gameObjectsCopy2[i] -> type) << " | " << gameObjectsCopy2[i] -> posX << " | " << gameObjectsCopy2[i] -> posY << " | " << gameObjectsCopy2[i] -> range << " | " << gameObjectsCopy2[i] -> messageNum << " | " << gameObjectsCopy2[i] -> addMessageNum << " | " << gameObjectsCopy2[i] -> moveMessageNum << " | " << gameObjectsCopy2[i] -> leaveMessageNum << endl;
-            
-            map<entity_t, entity_t>::iterator listIter;
-            cout << "more: " << endl;
-            for (listIter = gameObjectsCopy2[i] -> removeMessageDetail . begin(); listIter != gameObjectsCopy2[i] -> removeMessageDetail . end(); listIter ++) {
-                if (gameObjects[i] -> removeMessageDetail . find(listIter -> first) == gameObjects[i] -> removeMessageDetail . end()) {
-                    cout << listIter -> first << " | " << uint16_t(gameObjectsCopy2[listIter -> first] -> type) << " | " << gameObjectsCopy2[listIter -> first] -> posX << " | " << gameObjectsCopy2[listIter -> first] -> posY << endl;
-                }
-            }
-            
-            cout << "less: " << endl;
-            for (listIter = gameObjects[i] -> removeMessageDetail . begin(); listIter != gameObjects[i] -> removeMessageDetail . end(); listIter ++) {
-                if (gameObjectsCopy2[i] -> removeMessageDetail . find(listIter -> first) == gameObjectsCopy2[i] -> removeMessageDetail . end()) {
-                    cout << listIter -> first << " | " << uint16_t(gameObjectsCopy2[listIter -> first] -> type) << " | " << gameObjectsCopy2[listIter -> first] -> posX << " | " << gameObjectsCopy2[listIter -> first] -> posY << endl;
-                    
-                    NTree *t1 = gameObjectsCopy2[i] -> tree;
-                    NTree *t2 = gameObjectsCopy2[listIter -> first] -> tree;
-                    
-                    cout << t1 << endl;
-                    cout << t2 << endl;
-                    
-                    
-                    
-                }
-            }
+//            //test code
+//            cout << gameObjects[i] -> id << " | " << uint16_t(gameObjects[i] -> type) << " | " << gameObjects[i] -> posX << " | " << gameObjects[i] -> posY << " | " << gameObjects[i] -> range << " | " << gameObjects[i] -> messageNum << " | " << gameObjects[i] -> addMessageNum << " | " << gameObjects[i] -> moveMessageNum << " | " << gameObjects[i] -> leaveMessageNum << endl;
+//            
+//            cout << i << " | " << uint16_t(gameObjectsCopy2[i] -> type) << " | " << gameObjectsCopy2[i] -> posX << " | " << gameObjectsCopy2[i] -> posY << " | " << gameObjectsCopy2[i] -> range << " | " << gameObjectsCopy2[i] -> messageNum << " | " << gameObjectsCopy2[i] -> addMessageNum << " | " << gameObjectsCopy2[i] -> moveMessageNum << " | " << gameObjectsCopy2[i] -> leaveMessageNum << endl;
+//            
+//            map<entity_t, entity_t>::iterator listIter;
+//            cout << "more: " << endl;
+//            for (listIter = gameObjectsCopy2[i] -> removeMessageDetail . begin(); listIter != gameObjectsCopy2[i] -> removeMessageDetail . end(); listIter ++) {
+//                if (gameObjects[i] -> removeMessageDetail . find(listIter -> first) == gameObjects[i] -> removeMessageDetail . end()) {
+//                    cout << listIter -> first << " | " << uint16_t(gameObjectsCopy2[listIter -> first] -> type) << " | " << gameObjectsCopy2[listIter -> first] -> posX << " | " << gameObjectsCopy2[listIter -> first] -> posY << endl;
+//                }
+//            }
+//            
+//            cout << "less: " << endl;
+//            for (listIter = gameObjects[i] -> removeMessageDetail . begin(); listIter != gameObjects[i] -> removeMessageDetail . end(); listIter ++) {
+//                if (gameObjectsCopy2[i] -> removeMessageDetail . find(listIter -> first) == gameObjectsCopy2[i] -> removeMessageDetail . end()) {
+//                    cout << listIter -> first << " | " << uint16_t(gameObjectsCopy2[listIter -> first] -> type) << " | " << gameObjectsCopy2[listIter -> first] -> posX << " | " << gameObjectsCopy2[listIter -> first] -> posY << endl;
+//                    
+//                    NTree *t1 = gameObjectsCopy2[i] -> tree;
+//                    NTree *t2 = gameObjectsCopy2[listIter -> first] -> tree;
+//                    
+//                    cout << t1 << endl;
+//                    cout << t2 << endl;
+//                    
+//                    
+//                    
+//                }
+//            }
             
             
             return 1;

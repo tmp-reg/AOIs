@@ -10,14 +10,13 @@
 #include "../../AOIServices/EuDistanceAOIService.hpp"
 
 int main() {
+    
+    int i = 4;
+    cout << "Test " << i + 1 << " :" << endl;
     BasePerformanceTest *test = new BasePerformanceTest();
-    
     test -> world -> aoi = new EuDistanceAOIService();
-    
-    // here it the test
-    test -> test(1);
-    // end test
-    
+    test -> test(i + 1);
+    delete test -> world -> aoi;
     delete test;
     
     return 0;

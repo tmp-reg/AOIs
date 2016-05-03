@@ -16,9 +16,6 @@ BasePerformanceTest::BasePerformanceTest() {
 }
 
 BasePerformanceTest::~BasePerformanceTest() {
-    if (this -> world -> aoi) {
-        delete this -> world -> aoi;
-    }
     delete world;
 }
 
@@ -37,20 +34,30 @@ void BasePerformanceTest::testAdd(int i) {
     for (iter = gameObjects . begin(); iter != gameObjects . end(); iter ++) {
         world -> addObject(*iter);
     }
-    
-    
+    cout << "add:" << endl;
+    cout << "\taddMsgNum: " << world -> addMessageNum << endl;
+    cout << "\tmoveMsgNum: " << world -> moveMessageNum << endl;
+    cout << "\tleaveMsgNum: " << world -> leaveMessageNum << endl << endl;
 }
 
 void BasePerformanceTest::testMove(int i) {
     for (int i = 0; i < movedObjects.size(); i ++) {
         movedObjects[i] -> move(movedPosX[i], movedPosY[i]);
     }
+    cout << "move:" << endl;
+    cout << "\taddMsgNum: " << world -> addMessageNum << endl;
+    cout << "\tmoveMsgNum: " << world -> moveMessageNum << endl;
+    cout << "\tleaveMsgNum: " << world -> leaveMessageNum << endl << endl;
 }
 
 void BasePerformanceTest::testLeave(int i) {
     for (int i = 0; i < leavedObjects.size(); i ++) {
         world -> removeObject(leavedObjects[i]);
     }
+    cout << "leave:" << endl;
+    cout << "\taddMsgNum: " << world -> addMessageNum << endl;
+    cout << "\tmoveMsgNum: " << world -> moveMessageNum << endl;
+    cout << "\tleaveMsgNum: " << world -> leaveMessageNum << endl << endl;
 }
 
 void BasePerformanceTest::initGame(int i) {
@@ -93,6 +100,7 @@ void BasePerformanceTest::initGame(int i) {
     
     int tmpX, tmpY;
     while (fscanf(fp, "%d %d %d %d\n", &i, &id, &posX, &posY) != EOF) {
+        id -= 1;
         movedObjects.push_back(gameObjects[id]);
         if (i < movedNum * 0.2) {
             movedPosX.push_back(posX);
@@ -127,12 +135,13 @@ void BasePerformanceTest::initGame(int i) {
     }
     
     while (fscanf(fp, "%d\n", &id) != EOF) {
+        id -= 1;
         leavedObjects.push_back(gameObjects[id]);
     }
 }
 
 void BasePerformanceTest::deInitGame() {
     for (int i = 0; i < objectNum; i ++) {
-        delete gameObjects[i + 1];
+        delete gameObjects[i];
     }
 }

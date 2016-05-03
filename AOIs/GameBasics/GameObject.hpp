@@ -48,7 +48,6 @@ public:
     entity_t addMessageNum;
     entity_t leaveMessageNum;
     entity_t moveMessageNum;
-    map<entity_t, entity_t> addMessageDetail, removeMessageDetail;
     
     NTree *tree;
     

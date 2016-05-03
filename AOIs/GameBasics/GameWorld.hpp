@@ -37,6 +37,11 @@ public:
     
     bool onObjectMove(GameObject *obj, position_t newPosX, position_t newPosY);
     
+    // for test
+    entity_t addMessageNum;
+    entity_t leaveMessageNum;
+    entity_t moveMessageNum;
+    
 private:
     map<entity_t, GameObject*> gameObjects;
     

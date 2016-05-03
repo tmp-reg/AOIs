@@ -15,7 +15,7 @@ GameWorld::GameWorld() {
     new(this)GameWorld(10000, 10000);
 }
 
-GameWorld::GameWorld(position_t width, position_t length): width(width), length(length), entityNum(0) {
+GameWorld::GameWorld(position_t width, position_t length): width(width), length(length), entityNum(0), addMessageNum(0), moveMessageNum(0), leaveMessageNum(0) {
     cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl;
     cout << "Create  !!! GameWorld width: " << width << ", length: " << length << endl;
     cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n" << endl;

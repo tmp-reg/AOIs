@@ -31,12 +31,13 @@ void GameObject::receiveMessagesFromPublisher(GameObject *publisher, state_t sta
     
     if (ADD_MESSAGE == state) {
         addMessageNum ++;
-        addMessageDetail[publisher -> id] = publisher -> id;
+        this -> world -> addMessageNum ++;
     } else if (REMOVE_MESSAGE == state) {
         leaveMessageNum ++;
-        removeMessageDetail[publisher -> id] = publisher -> id;
+        this -> world -> leaveMessageNum ++;
     } else if (MOVE_MESSAGE == state) {
         moveMessageNum ++;
+        this -> world -> moveMessageNum ++;
     }
     
     //cout << (uint16_t)state << " : " << this -> id << " receives from " << publisher -> id << endl;
@@ -50,19 +51,17 @@ void GameObject::receiveMessagesFromPublishers(list<GameObject *> publishers, st
     list<GameObject *>::iterator iter;
     for (iter = publishers . begin(); iter != publishers . end(); iter ++) {
         //cout << (uint16_t)state << " : " << this -> id << " receives from " << (*iter) -> id << endl;
-        if (ADD_MESSAGE == state) {
-            addMessageDetail[(*iter) -> id] = (*iter) -> id;
-        } else if (REMOVE_MESSAGE == state) {
-            removeMessageDetail[(*iter) -> id] = (*iter) -> id;
-        }
     }
     
     if (ADD_MESSAGE == state) {
         addMessageNum += num;
+        this -> world -> addMessageNum += num;
     } else if (REMOVE_MESSAGE == state) {
         leaveMessageNum += num;
+        this -> world -> leaveMessageNum += num;
     } else if (MOVE_MESSAGE == state) {
         moveMessageNum += num;
+        this -> world -> moveMessageNum += num;
     }
     
 }
