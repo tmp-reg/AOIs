@@ -9,7 +9,7 @@
 #include "BasePerformanceTest.hpp"
 #include "../../AOIServices/NTreeAOIService.hpp"
 
-int main() {
+int main16() {
     
     int i = 4;
     

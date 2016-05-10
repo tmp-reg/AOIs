@@ -24,14 +24,14 @@ public:
 private:
     // basic
     FILE *fp;
-    int width = 10000;
-    int height = 10000;
+    int width = 25000;
+    int height = 25000;
     
-    int objectNum = 10000;
-    int movedNum = 5000;
-    int leaveNum = 5000;
-    int maxRange = 200;
-    int maxMove = 100;
+    int objectNum = 25000;
+    int movedNum = 12500;
+    int leaveNum = 12500;
+    int maxRange = 500;
+    int maxMove = 250;
     
     // to set
     vector<GameObject *> gameObjects, movedObjects, leavedObjects;
