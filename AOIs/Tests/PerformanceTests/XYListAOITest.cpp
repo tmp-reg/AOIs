@@ -11,7 +11,7 @@
 
 int main12() {
     
-    int i = 0;
+    int i = 1;
     
     cout << "Test " << i + 1 << " :" << endl;
     BasePerformanceTest *test = new BasePerformanceTest();

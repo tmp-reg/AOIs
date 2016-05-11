@@ -9,9 +9,9 @@
 #include "BasePerformanceTest.hpp"
 #include "../../AOIServices/XYOrthogonalListAOIService.hpp"
 
-int main13() {
+int main() {
     
-    int i = 4;
+    int i = 0;
     
     cout << "Test " << i + 1 << " :" << endl;
     BasePerformanceTest *test = new BasePerformanceTest();

@@ -9,12 +9,12 @@
 #include "BasePerformanceTest.hpp"
 #include "../../AOIServices/TowerHexagonAOIService.hpp"
 
-int main() {
+int main15() {
     
     int i = 1;
     cout << "Test " << i + 1 << " :" << endl;
     BasePerformanceTest *test = new BasePerformanceTest();
-    test -> world -> aoi = new TowerHexagonAOIService(test -> world -> width, test -> world -> length, 6000);
+    test -> world -> aoi = new TowerHexagonAOIService(test -> world -> width, test -> world -> length, 625);
     test -> test(i + 1);
     delete test -> world -> aoi;
     delete test;
