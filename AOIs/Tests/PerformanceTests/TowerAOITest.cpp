@@ -9,7 +9,7 @@
 #include "BasePerformanceTest.hpp"
 #include "../../AOIServices/TowerAOIService.hpp"
 
-int main() {
+int main14() {
     
     int i = 1;
     cout << "Test " << i + 1 << " :" << endl;
