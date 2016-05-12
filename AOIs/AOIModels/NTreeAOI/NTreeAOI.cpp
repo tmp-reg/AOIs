@@ -9,7 +9,7 @@
 #include "NTreeAOI.hpp"
 
 NTreeAOI::NTreeAOI(position_t worldWidth, position_t worldHeight, entity_t towerMaxPublisherNum, position_t maxLevel): worldWidth(worldWidth), worldHeight(worldHeight), towerMaxPublisherNum(towerMaxPublisherNum) {
-    this -> tree = new NTree(0, worldWidth, 0, worldHeight, towerMaxPublisherNum, maxLevel, 1);
+    this -> tree = new NTree(0, worldWidth, 0, worldHeight, towerMaxPublisherNum, maxLevel, 0);
 }
 
 NTreeAOI::~NTreeAOI() {

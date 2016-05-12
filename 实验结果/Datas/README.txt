@@ -34,6 +34,3 @@ int movedNum = 25000;
 int leaveNum = 25000;
 int maxRange = 1000;
 int maxMove = 500;
-
-tower：500, 500 / 500
-nNree：maxNum:500, level:3

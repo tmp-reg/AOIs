@@ -14,6 +14,7 @@ NTree::NTree(position_t minX, position_t maxX, position_t minY, position_t maxY,
     for (int i = 0; i < childrenNum; i ++) {
         this -> children[i] = NULL;
     }
+    cout << endl <<  "new NTree level : " << level << endl << endl;
 }
 
 NTree::~NTree() {
